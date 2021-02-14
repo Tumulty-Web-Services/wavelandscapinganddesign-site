@@ -1,7 +1,3 @@
 export default function TitleAndButton() {
-  return (
-    <div>
-      Title & Button will go here :)
-    </div>
-  );
+  return <div>Title & Button will go here :)</div>;
 }

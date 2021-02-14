@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Image from 'next/image';
-import Link from 'next/link';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import styles from 'styles/Navbar.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Nav from "react-bootstrap/Nav";
+import styles from "styles/Navbar.module.css";
 
 export default function Navbar() {
   return (
@@ -28,7 +28,10 @@ export default function Navbar() {
                     <strong>Wave Landscaping & Design</strong>
                   </h1>
                   <h2 className="subtitle">
-                    <em>Your landscaping should transport you to your very own personal getaway</em>
+                    <em>
+                      Your landscaping should transport you to your very own
+                      personal getaway
+                    </em>
                   </h2>
                 </div>
               </a>
@@ -76,30 +79,22 @@ export default function Navbar() {
             <Nav className="justify-content-end mt-0">
               <Nav.Item>
                 <Link href="/services">
-                  <a className={styles.navLinks}>
-                    Services
-                  </a>
+                  <a className={styles.navLinks}>Services</a>
                 </Link>
               </Nav.Item>
               <Nav.Item>
                 <Link href="/gallery">
-                  <a className={styles.navLinks}>
-                    Gallery
-                  </a>
+                  <a className={styles.navLinks}>Gallery</a>
                 </Link>
               </Nav.Item>
               <Nav.Item>
                 <Link href="/careers">
-                  <a className={styles.navLinks}>
-                    Careers
-                  </a>
+                  <a className={styles.navLinks}>Careers</a>
                 </Link>
               </Nav.Item>
               <Nav.Item>
                 <Link href="/contact">
-                  <a className={styles.navLinks}>
-                    Contact
-                  </a>
+                  <a className={styles.navLinks}>Contact</a>
                 </Link>
               </Nav.Item>
             </Nav>

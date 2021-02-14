@@ -1,7 +1,3 @@
 export default function Careers() {
-  return (
-    <div>
-      Careers
-    </div>
-  );
+  return <div>Careers</div>;
 }

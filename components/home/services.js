@@ -1,7 +1,3 @@
 export default function Services() {
-  return (
-    <div>
-      Services columns
-    </div>
-  );
+  return <div>Services columns</div>;
 }

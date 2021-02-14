@@ -1,6 +1,5 @@
 .banner {
-  background: url(/images/banner.jpg)
-  no-repeat center center;
+  background: url(/images/banner.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,5 +7,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height:50vh;
+  height: 50vh;
 }

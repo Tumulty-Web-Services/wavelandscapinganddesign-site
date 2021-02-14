@@ -1,63 +1,65 @@
 /** Fonts **/
 @font-face {
-  font-family: 'EBGaramond Regular';
-  src: url('../public/fonts/EBGaramond-Regular.ttf');
+  font-family: "EBGaramond Regular";
+  src: url("../public/fonts/EBGaramond-Regular.ttf");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'EBGaramond Bold';
-  src: url('../public/fonts/EBGaramond-Bold.ttf');
+  font-family: "EBGaramond Bold";
+  src: url("../public/fonts/EBGaramond-Bold.ttf");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'EBGaramond Italic';
-  src: url('../public/fonts/EBGaramond-Italic.ttf');
+  font-family: "EBGaramond Italic";
+  src: url("../public/fonts/EBGaramond-Italic.ttf");
   font-style: italic;
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Proxima Nova Bold';
-  src: url('../public/fonts/proxima-nova-bold.ttf');
+  font-family: "Proxima Nova Bold";
+  src: url("../public/fonts/proxima-nova-bold.ttf");
   font-weight: 700;
   font-display: swap;
 }
 
 body {
-margin: 0px;
-padding: 0px;
-font-family: 'EBGaramond Regular';
+  margin: 0px;
+  padding: 0px;
+  font-family: "EBGaramond Regular";
 }
 
-a { color: inherit; text-decoration: none; } 
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .title {
-  font-family: 'Proxima Nova Bold';
+  font-family: "Proxima Nova Bold";
 }
 
 .subtitle {
   color: #444444;
-  font-family: 'EBGaramond Italic';
+  font-family: "EBGaramond Italic";
   font-size: 18px;
-  margin-top:-5px;
+  margin-top: -5px;
 }
 
 .navigation {
   font-size: 1.6rem;
 }
 
-.link:hover {  
+.link:hover {
   font-weight: bold;
 }
 
 .link:visited {
-  font-family: 'EBGaramond Italic';
+  font-family: "EBGaramond Italic";
 }

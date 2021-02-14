@@ -1,5 +1,5 @@
-import Container from 'react-bootstrap/Container';
-import styles from 'styles/Home.module.css';
+import Container from "react-bootstrap/Container";
+import styles from "styles/Home.module.css";
 
 export default function Home() {
   return (
