@@ -16,6 +16,7 @@
   color:#fff;
   text-shadow: 2px 3px 5px #000;
   font-size: 4rem;
+  margin-bottom: -20px;
   text-align:center;
 }
 
@@ -27,7 +28,7 @@
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .blueTitle {
     font-size: 9rem;
   }
