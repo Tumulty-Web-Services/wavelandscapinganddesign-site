@@ -1,0 +1,38 @@
+.banner {
+  background: url(/images/banner.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  height: 60vh
+}
+
+.whiteTitle {
+  color:#fff;
+  text-shadow: 2px 3px 5px #000;
+  font-size: 4rem;
+  text-align:center;
+}
+
+.blueTitle {
+  color: #7594D1;
+  display: block;
+  text-shadow: 2px 3px 5px #000;
+  font-size: 5rem;
+}
+
+
+@media (min-width: 1200px) {
+  .blueTitle {
+    font-size: 9rem;
+  }
+  .whiteTitle {
+    font-size: 6rem;    
+    margin-bottom: -40px;
+  }
+}

@@ -1,9 +1,8 @@
-import Head from "next/head";
-import Navbar from "components/navbar";
-import Footer from "components/footer";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "animate.css/animate.min.css";
-import "styles/global.css";
+import Head from 'next/head';
+import Header from 'components/header';
+import Footer from 'components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'styles/global.css';
 
 function App({ Component, pageProps }) {
   return (
@@ -36,7 +35,7 @@ function App({ Component, pageProps }) {
         />
         <link rel="manifest" href="/site.webmanifest" /> */}
       </Head>
-      <Navbar />
+      <Header />
       <main>
         <Component {...pageProps} />
       </main>
