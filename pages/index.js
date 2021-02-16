@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Banner from 'components/home/banner';
 import Services from 'components/home/services';
 import Gallery from 'components/home/gallery';
+import SocialMedia from 'components/home/social-media';
+import TitleAndButton from 'components/home/title-and-button';
 import styles from 'styles/Home.module.css';
 
 export default function Home() {
@@ -25,7 +27,13 @@ export default function Home() {
       <div className={styles.grayBackground}>
         <Services />
         <Gallery />
+        <TitleAndButton
+          title="This is only a glimpse of what we can do"
+          link="/gallery"
+          label="Full Gallery"
+        />
       </div>
+      <SocialMedia />
     </>
   );
 }
