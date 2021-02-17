@@ -2,12 +2,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from 'styles/Navbar.module.css';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function Header() {
   return (
@@ -18,7 +16,7 @@ export default function Header() {
             <Link href="https://www.facebook.com/wavelandscapingdesign">
               <a>
                 <Image
-                  src="/images/social-media-icons/facebook-40x40.png"
+                  src={imageSourceFormatter('/social-media-icons/facebook-40x40.png')}
                   height={25}
                   width={25}
                   alt="facebook"
@@ -30,7 +28,7 @@ export default function Header() {
             <Link href="https://www.instagram.com/wavelandscapingdesign">
               <a>
                 <Image
-                  src="/images/social-media-icons/instagram-40x40.png"
+                  src={imageSourceFormatter('/social-media-icons/instagram-40x40.png')}
                   height={25}
                   width={25}
                   alt="instagram"
@@ -42,7 +40,7 @@ export default function Header() {
             <Link href="https://www.tiktok.com/@wavelandscapingdesign">
               <a>
                 <Image
-                  src="/images/social-media-icons/tiktok-40x40.png"
+                  src={imageSourceFormatter('/social-media-icons/tiktok-40x40.png')}
                   height={25}
                   width={25}
                   alt="tiktok"
@@ -56,7 +54,7 @@ export default function Header() {
             <Link href="/">
               <a className="d-flex">
                 <Image
-                  src="/images/Logo-40x40.png"
+                  src={imageSourceFormatter('/various/Logo-40x40.png')}
                   alt="Wave Landscaping & Design"
                   height={20}
                   width={60}

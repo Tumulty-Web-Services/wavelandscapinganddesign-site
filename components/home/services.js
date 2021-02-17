@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function Services() {
   return (
@@ -21,7 +22,7 @@ export default function Services() {
               <Link href="/services/#lawn-maintenance">
                 <a>
                   <Image
-                    src="/images/service-icons/lawn-maintanence.png"
+                    src={imageSourceFormatter('/service-icons/lawn-maintanence.png')}
                     alt="lawn maintanence"
                     width={220}
                     height={192}
@@ -41,7 +42,7 @@ export default function Services() {
               <Link href="/services/#landscape-design">
                 <a>
                   <Image
-                    src="/images/service-icons/landscape-design.png"
+                    src={imageSourceFormatter('/service-icons/landscape-design.png')}
                     alt="landscape desgin"
                     width={220}
                     height={206}
@@ -61,7 +62,7 @@ export default function Services() {
               <Link href="/services/#irrigation-services">
                 <a>
                   <Image
-                    src="/images/service-icons/irrigation.png"
+                    src={imageSourceFormatter('/service-icons/irrigation.png')}
                     alt="irrigation"
                     width={220}
                     height={191}
