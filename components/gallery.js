@@ -7,11 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import imageSourceFormatter from 'utils/image-source-format';
 
-function ModalImageContainer({ props }) {
-  const {
-    modalShow, fileName, alt, setModalShow,
-  } = props;
-
+function ModalImageContainer({ modalShow, fileName, alt, setModalShow }) {
   return (
     <Modal
       show={modalShow}
@@ -31,7 +27,7 @@ function ModalImageContainer({ props }) {
   );
 }
 
-export default function Gallery({ slides }) {
+export default function Gallery({ photos }) {
   const [modalShow, setModalShow] = useState(false);
 
   return (
@@ -41,21 +37,23 @@ export default function Gallery({ slides }) {
       </h3>
       <Container>
         <Row>
-          {slides
-            && slides.map((slide) => (
-              <Col key={slide.alt} sm={12} md={3} className="px-0 mx-0">
+          {photos
+            && photos.map((photo) => (
+              <Col key={photo.id} sm={12} md={4} className="px-0 mx-0">
+                <ModalImageContainer
+                  modalShow={modalShow}
+                  setModalShow={() => setModalShow(false)}
+                  fileName={imageSourceFormatter(`gallery/${photo.fileName}`)}
+                  alt={photo.alt}
+                />
                 <Image
-                  src={imageSourceFormatter(`gallery/${slide.fileName}`)}
-                  alt={slide.alt}
-                  layout="fill"
+                  src={imageSourceFormatter(`/gallery/${photo.fileName}`)}
+                  alt={photo.alt}
+                  width={photo.width}
+                  height={photo.height}
                   onClick={() => setModalShow(true)}
                 />
-                <ModalImageContainer
-                  show={modalShow}
-                  onHide={() => setModalShow(false)}
-                  fileName={imageSourceFormatter(`gallery/${slide.fileName}`)}
-                  alt={slide.alt}
-                />
+
               </Col>
             ))}
         </Row>

@@ -16,13 +16,15 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.0.0-beta2",
+    "faunadb": "^4.0.3",
     "next": "^10.0.6",
     "next-on-netlify": "^2.8.7",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
-    "simple-react-lightbox": "^3.6.3"
+    "simple-react-lightbox": "^3.6.3",
+    "swr": "^0.4.2"
   },
   "devDependencies": {
     "eslint": "^7.20.0",
