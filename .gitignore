@@ -2,3 +2,5 @@ node_modules/*
 .next
 .history
 .env
+out_functions
+out_publish
