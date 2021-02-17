@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import Banner from 'components/home/banner';
 import Services from 'components/home/services';
-import Gallery from 'components/gallery';
+import GalleryGrid from 'components/gallery';
 import SocialMedia from 'components/home/social-media';
 import TitleAndButton from 'components/home/title-and-button';
 import styles from 'styles/Home.module.css';
 import getGalleryPhotos from 'utils/fauna';
+import imageSourceFormatter from 'utils/image-source-format';
 
-export default function Home({ gallery }) {  
+export default function Home({ gallery }) {
   return (
     <>
       <Head>
@@ -44,12 +45,16 @@ export default function Home({ gallery }) {
       <Banner />
       <div className={styles.grayBackground}>
         <Services />
-        <Gallery photos={gallery} />
+        <h3 className="text-center mb-4" style={{ fontSize: '2.4rem' }}>
+          <strong>Gallery</strong>
+        </h3>
+        <GalleryGrid photos={gallery} />
         <TitleAndButton
           title="This is only a glimpse of what we can do"
           link="/gallery"
           label="Full Gallery"
         />
+        <br />
       </div>
       <SocialMedia />
     </>
@@ -58,17 +63,16 @@ export default function Home({ gallery }) {
 
 export async function getStaticProps() {
   const galleryData = await getGalleryPhotos();
+
   return {
     props: {
-      gallery: galleryData.filter((_, i) => i <= 8).map((photo) => {
-        return {
-          id: photo.ts,
-          fileName: photo.data.fileName,
-          alt: photo.data.alt,
-          width: photo.data.width,
-          height: photo.data.height
-        }
-      }),
-    }
-  }
+      gallery: galleryData.filter((_, i) => i <= 8).map((photo) => ({
+        id: photo.ts,
+        src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
+        alt: photo.data.alt,
+        width: photo.data.width,
+        height: photo.data.height,
+      })) || [],
+    },
+  };
 }
