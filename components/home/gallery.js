@@ -22,17 +22,12 @@ function ModalImageContainer({ props }) {
     >
       <Modal.Header closeButton />
       <Modal.Body>
-        <Image
-          src={fileName}
-          alt={alt}
-          layout="fill"
-        />
+        <Image src={fileName} alt={alt} layout="fill" />
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={setModalShow(false)}>Close</Button>
       </Modal.Footer>
     </Modal>
-
   );
 }
 
@@ -46,22 +41,23 @@ export default function Gallery({ slides }) {
       </h3>
       <Container>
         <Row>
-          {slides && slides.map((slide) => (
-            <Col key={slide.alt} sm={12} md={3} className="px-0 mx-0">
-              <Image
-                src={imageSourceFormatter(`gallery/${slide.fileName}`)}
-                alt={slide.alt}
-                layout="fill"
-                onClick={() => setModalShow(true)}
-              />
-              <ModalImageContainer
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-                fileName={imageSourceFormatter(`gallery/${slide.fileName}`)}
-                alt={slide.alt}
-              />
-            </Col>
-          ))}
+          {slides
+            && slides.map((slide) => (
+              <Col key={slide.alt} sm={12} md={3} className="px-0 mx-0">
+                <Image
+                  src={imageSourceFormatter(`gallery/${slide.fileName}`)}
+                  alt={slide.alt}
+                  layout="fill"
+                  onClick={() => setModalShow(true)}
+                />
+                <ModalImageContainer
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                  fileName={imageSourceFormatter(`gallery/${slide.fileName}`)}
+                  alt={slide.alt}
+                />
+              </Col>
+            ))}
         </Row>
       </Container>
     </div>

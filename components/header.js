@@ -16,7 +16,9 @@ export default function Header() {
             <Link href="https://www.facebook.com/wavelandscapingdesign">
               <a>
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/facebook-40x40.png')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/facebook-40x40.png',
+                  )}
                   height={25}
                   width={25}
                   alt="facebook"
@@ -28,7 +30,9 @@ export default function Header() {
             <Link href="https://www.instagram.com/wavelandscapingdesign">
               <a>
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/instagram-40x40.png')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/instagram-40x40.png',
+                  )}
                   height={25}
                   width={25}
                   alt="instagram"
@@ -40,7 +44,9 @@ export default function Header() {
             <Link href="https://www.tiktok.com/@wavelandscapingdesign">
               <a>
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/tiktok-40x40.png')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/tiktok-40x40.png',
+                  )}
                   height={25}
                   width={25}
                   alt="tiktok"
@@ -76,7 +82,10 @@ export default function Header() {
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse
+            id="responsive-navbar-nav"
+            className="justify-content-end"
+          >
             <Nav>
               <Nav.Item>
                 <Link href="/services">

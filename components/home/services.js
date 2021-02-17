@@ -22,7 +22,9 @@ export default function Services() {
               <Link href="/services/#lawn-maintenance">
                 <a>
                   <Image
-                    src={imageSourceFormatter('/service-icons/lawn-maintanence.png')}
+                    src={imageSourceFormatter(
+                      '/service-icons/lawn-maintanence.png',
+                    )}
                     alt="lawn maintanence"
                     width={220}
                     height={192}
@@ -30,7 +32,10 @@ export default function Services() {
                   />
                   <h4>Lawn maintenance</h4>
                   <hr className="mx-5" />
-                  <p className="text-center px-4">Achieve a greener lawn with lawn care services from our team.</p>
+                  <p className="text-center px-4">
+                    Achieve a greener lawn with lawn care services from our
+                    team.
+                  </p>
                 </a>
               </Link>
             </Card.Body>
@@ -42,7 +47,9 @@ export default function Services() {
               <Link href="/services/#landscape-design">
                 <a>
                   <Image
-                    src={imageSourceFormatter('/service-icons/landscape-design.png')}
+                    src={imageSourceFormatter(
+                      '/service-icons/landscape-design.png',
+                    )}
                     alt="landscape desgin"
                     width={220}
                     height={206}
@@ -50,7 +57,10 @@ export default function Services() {
                   />
                   <h4>Landscape Desgin</h4>
                   <hr className="mx-5" />
-                  <p className="text-center px-4">Endless ideas for customizing your personal resort or your backyard.</p>
+                  <p className="text-center px-4">
+                    Endless ideas for customizing your personal resort or your
+                    backyard.
+                  </p>
                 </a>
               </Link>
             </Card.Body>
@@ -70,7 +80,9 @@ export default function Services() {
                   />
                   <h4>Irrigation Services</h4>
                   <hr className="mx-5" />
-                  <p className="text-center px-4 pb-5">Offering sprinkler checks and system repairs.</p>
+                  <p className="text-center px-4 pb-5">
+                    Offering sprinkler checks and system repairs.
+                  </p>
                 </a>
               </Link>
             </Card.Body>
@@ -78,14 +90,11 @@ export default function Services() {
         </Col>
       </Row>
       <style jsx>
-        {
-` 
-            h4 {
-              font-family: "Proxima Nova Bold"
-            }
-`
-
-      }
+        {`
+          h4 {
+            font-family: "Proxima Nova Bold";
+          }
+        `}
       </style>
     </Container>
   );
