@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Banner from 'components/pages/banner';
 
-export default function Services() {
+export default function Contact() {
   return (
     <>
       <Head>
         <title>
-          Wave Landscaping & Design: We offer a variety of landscaping services
+          Wave Landscaping & Design: get in touch!
         </title>
         <meta
           name="description"
@@ -35,9 +35,9 @@ export default function Services() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         /> */}
       </Head>
-      <Banner title="Services" />
+      <Banner title="Reviews" />
       <br />
-      Add a list of services
+      Add a list of reviews
     </>
   );
 }
