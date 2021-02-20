@@ -98,6 +98,11 @@ export default function Header() {
                 </Link>
               </Nav.Item>
               <Nav.Item>
+                <Link href="/reviews">
+                  <a className={styles.navLinks}>Reviews</a>
+                </Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Link href="/careers">
                   <a className={styles.navLinks}>Careers</a>
                 </Link>

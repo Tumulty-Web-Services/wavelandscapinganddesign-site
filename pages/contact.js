@@ -35,9 +35,9 @@ export default function Contact() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         /> */}
       </Head>
-      <Banner title="Reviews" />
+      <Banner title="Get in touch!" />
       <br />
-      Add a list of reviews
+      Add the Footer Contact form component here..
     </>
   );
 }
