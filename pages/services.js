@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Banner from 'components/pages/banner';
 
 export default function Services() {
@@ -36,8 +39,32 @@ export default function Services() {
         /> */}
       </Head>
       <Banner title="Services" />
-      <br />
-      Add a list of services
+      <Container>
+        <Row>
+          <Col sm={12} md={6}>
+            Service image
+          </Col>
+          <Col sm={12} md={6}>
+            Service description
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12} md={6}>
+            Service image
+          </Col>
+          <Col sm={12} md={6}>
+            Service description
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12} md={6}>
+            Service image
+          </Col>
+          <Col sm={12} md={6}>
+            Service description
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

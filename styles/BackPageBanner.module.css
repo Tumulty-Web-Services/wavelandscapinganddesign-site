@@ -1,0 +1,42 @@
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(https://res.cloudinary.com/tumulty-web-services/image/upload/v1613526976/wavelandscapinganddesign/various/banner.png) no-repeat 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  height: 30vh;
+}
+.titleContainer {
+  border: 3px solid #fff;
+  display: block;
+  padding: 2em;
+  padding-right: 4.8em;
+  padding-left: 4.8em;
+}
+.whiteTitle {
+  color: #fff;
+  text-shadow: 2px 3px 5px #000;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.blueTitle {
+  color: #7594d1;
+  display: block;
+  text-shadow: 2px 3px 5px #000;
+  font-size: 5rem;
+}
+
+@media (min-width: 1400px) {
+  .blueTitle {
+    font-size: 9rem;
+  }
+  .whiteTitle {
+    font-size: 5rem;
+  }
+}
