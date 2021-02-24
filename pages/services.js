@@ -4,6 +4,7 @@ import ServiceDescriptionLeft from 'components/services/service-description-left
 import ServiceDescriptionRight from 'components/services/service-description-right';
 import ServiceLinks from 'components/services/service-links';
 import Banner from 'components/pages/banner';
+import FooterContact from 'components/pages/footer-contact';
 
 export default function Services() {
   return (
@@ -99,6 +100,7 @@ export default function Services() {
           link="residential"
         />
       </Container>
+      <FooterContact />
     </>
   );
 }

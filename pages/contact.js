@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Banner from 'components/pages/banner';
+import ContactForm from 'components/contact-form';
 
 export default function Contact() {
   return (
@@ -37,7 +38,7 @@ export default function Contact() {
       </Head>
       <Banner title="Get in touch!" />
       <br />
-      Add the Footer Contact form component here..
+      <ContactForm contactPage />
     </>
   );
 }

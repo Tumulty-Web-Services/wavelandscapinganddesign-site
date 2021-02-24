@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Banner from 'components/pages/banner';
 import GalleryGrid from 'components/gallery';
+import FooterContact from 'components/pages/footer-contact';
 import getGalleryPhotos from 'utils/fauna';
 import imageSourceFormatter from 'utils/image-source-format';
 
@@ -41,6 +42,7 @@ export default function LandscapeDesigns({ gallery }) {
       <Banner title="Landscape Designs" />
       <br />
       <GalleryGrid photos={gallery} />
+      <FooterContact />
     </>
   );
 }

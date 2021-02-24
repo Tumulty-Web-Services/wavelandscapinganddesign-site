@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Banner from 'components/pages/banner';
+import FooterContact from 'components/pages/footer-contact';
 
 export default function Careers() {
   return (
@@ -36,8 +37,8 @@ export default function Careers() {
         /> */}
       </Head>
       <Banner title="Careers" />
-      <br />
-      Add a netlify form here with file upload
+      Careers
+      <FooterContact />
     </>
   );
 }

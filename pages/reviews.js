@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Banner from 'components/pages/banner';
+import FooterContact from 'components/pages/footer-contact';
 
 export default function Reviews() {
   return (
@@ -38,6 +39,7 @@ export default function Reviews() {
       <Banner title="Reviews" />
       <br />
       Add a list of reviews
+      <FooterContact />
     </>
   );
 }
