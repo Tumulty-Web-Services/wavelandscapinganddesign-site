@@ -1,5 +1,5 @@
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(https://res.cloudinary.com/tumulty-web-services/image/upload/v1613526976/wavelandscapinganddesign/various/banner.png) no-repeat 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/images/back-page-banner.png) no-repeat 50%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   line-height: 1;
-  height: 30vh;
+  height: 40vh;
 }
 .titleContainer {
   border: 3px solid #fff;

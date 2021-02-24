@@ -1,0 +1,27 @@
+.title {
+  color: #7594D1;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.content {
+  font-size: 1.5rem;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.container {
+  padding-top: 4.2em;
+  padding-bottom: 4.2em;
+}
+
+.greenLink {
+  color: #309146;
+  font-size: 1.3rem;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-family: 'Proxima Nova Regular';
+}

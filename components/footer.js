@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -104,7 +105,13 @@ export default function Footer() {
             </div>
           </Col>
           <Col sm={12} md={4}>
-            Map
+            <Image
+              src="/images/west-palm-beach.png"
+              height={305}
+              width={513}
+              alt="West Palm Beach, Florida"
+              layout="intrinsic"
+            />
           </Col>
         </Row>
       </Container>
