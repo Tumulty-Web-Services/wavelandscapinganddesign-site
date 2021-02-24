@@ -12,4 +12,5 @@ Website for Wavescaping & Design, LLC
 6. Configure form to redirect to gmail
 7. Test everyting in mobile & fix lil buggies 
 8. Create a directory for landscape design images in cloudinary and upload them
+9. Make banner images perfect
 
