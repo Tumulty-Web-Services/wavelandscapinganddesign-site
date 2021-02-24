@@ -9,7 +9,7 @@ export default function ServiceDescriptionRight({
   title, content, image, height, width, link,
 }) {
   return (
-    <Row className="my-4" id={`#${link}`}>
+    <Row className="my-4" id={link}>
       <Col sm={12} md={6} className={styles.container}>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.content}>{content}</p>

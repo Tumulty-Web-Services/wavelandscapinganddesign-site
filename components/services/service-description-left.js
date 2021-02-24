@@ -7,7 +7,7 @@ export default function ServiceDescriptionLeft({
   title, content, image, height, width, link,
 }) {
   return (
-    <Row className="my-4" id={`#${link}`}>
+    <Row className="my-4" id={link}>
       <Col sm={12} md={6}>
         <Image
           src={image}
