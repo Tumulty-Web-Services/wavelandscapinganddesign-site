@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
       <Container>
         <Row>
-          <Col sm={12} md={8}>
+          <Col sm={12}>
             <div className="d-flex py-4">
               <div className="me-5">
                 <h4 className={styles.title}>Navigation</h4>
@@ -89,15 +89,6 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-          </Col>
-          <Col sm={12} md={4}>
-            <Image
-              src="/images/west-palm-beach.png"
-              height={305}
-              width={513}
-              alt="West Palm Beach, Florida"
-              layout="intrinsic"
-            />
           </Col>
         </Row>
       </Container>
