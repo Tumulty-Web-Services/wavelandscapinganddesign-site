@@ -66,13 +66,16 @@ export async function getStaticProps() {
 
   return {
     props: {
-      gallery: galleryData.filter((_, i) => i <= 8).map((photo) => ({
-        id: photo.ts,
-        src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
-        alt: photo.data.alt,
-        width: photo.data.width,
-        height: photo.data.height,
-      })) || [],
+      gallery:
+        galleryData
+          .filter((_, i) => i <= 8)
+          .map((photo) => ({
+            id: photo.ts,
+            src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
+            alt: photo.data.alt,
+            width: photo.data.width,
+            height: photo.data.height,
+          })) || [],
     },
   };
 }

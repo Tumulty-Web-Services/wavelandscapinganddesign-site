@@ -52,13 +52,14 @@ export async function getStaticProps() {
 
   return {
     props: {
-      gallery: galleryData.map((photo) => ({
-        id: photo.ts,
-        src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
-        alt: photo.data.alt,
-        width: photo.data.width,
-        height: photo.data.height,
-      })) || [],
+      gallery:
+        galleryData.map((photo) => ({
+          id: photo.ts,
+          src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
+          alt: photo.data.alt,
+          width: photo.data.width,
+          height: photo.data.height,
+        })) || [],
     },
   };
 }

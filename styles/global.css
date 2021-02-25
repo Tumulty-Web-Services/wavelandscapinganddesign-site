@@ -53,8 +53,6 @@ a {
   font-family: "EBGaramond Italic";
 }
 
-/* .modal-backdrop  {
-  background-color: rgba(0, 0, 0, 1);
-} */
-
-
+.blockquote-footer {
+  font-size: 1rem;
+}

@@ -4,7 +4,12 @@ import Row from 'react-bootstrap/Row';
 import styles from 'styles/Service.module.css';
 
 export default function ServiceDescriptionLeft({
-  title, content, image, height, width, link,
+  title,
+  content,
+  image,
+  height,
+  width,
+  link,
 }) {
   return (
     <Row className="my-4" id={link}>

@@ -18,44 +18,32 @@ export default function Footer() {
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <Link href="/services">
-                      <a>
-                        Services
-                      </a>
+                      <a>Services</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
-                      <a>
-                        Gallery
-                      </a>
+                      <a>Gallery</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/careers">
-                      <a>
-                        Careers
-                      </a>
+                      <a>Careers</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a>
-                        Contact
-                      </a>
+                      <a>Contact</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/sitemap.xml">
-                      <a>
-                        Sitemaps
-                      </a>
+                      <a>Sitemaps</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
-                      <a>
-                        Privacy Policy
-                      </a>
+                      <a>Privacy Policy</a>
                     </Link>
                   </li>
                 </ul>
@@ -65,23 +53,17 @@ export default function Footer() {
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <Link href="/services">
-                      <a>
-                        Facebook
-                      </a>
+                      <a>Facebook</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
-                      <a>
-                        Instagram
-                      </a>
+                      <a>Instagram</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/careers">
-                      <a>
-                        Tik Tok
-                      </a>
+                      <a>Tik Tok</a>
                     </Link>
                   </li>
                 </ul>
@@ -98,7 +80,11 @@ export default function Footer() {
                       <strong className={styles.blueTitle}>Phone: </strong>
                       516-319-3145
                     </p>
-                    <p><strong className={styles.blueTitle}>Based out of Palm Beach, Florida</strong></p>
+                    <p>
+                      <strong className={styles.blueTitle}>
+                        Based out of Palm Beach, Florida
+                      </strong>
+                    </p>
                   </li>
                 </ul>
               </div>

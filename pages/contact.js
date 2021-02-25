@@ -6,9 +6,7 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>
-          Wave Landscaping & Design: get in touch!
-        </title>
+        <title>Wave Landscaping & Design: get in touch!</title>
         <meta
           name="description"
           content="Wave Landscaping & Design provide top landscaping services such as lawn maintenance, landscape design, tree services, and cleanup"

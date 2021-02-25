@@ -6,17 +6,24 @@ import Row from 'react-bootstrap/Row';
 import styles from 'styles/Service.module.css';
 
 export default function ServiceDescriptionRight({
-  title, content, image, height, width, link,
+  title,
+  content,
+  image,
+  height,
+  width,
+  link,
 }) {
   return (
     <Row className="my-4" id={link}>
       <Col sm={12} md={6} className={styles.container}>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.content}>{content}</p>
-        {(link === 'landscape-design') && (
+        {link === 'landscape-design' && (
           <Link href="landscape-designs">
             <a>
-              <strong className={styles.greenLink}><u>Check out more of our designs!</u></strong>
+              <strong className={styles.greenLink}>
+                <u>Check out more of our designs!</u>
+              </strong>
             </a>
           </Link>
         )}

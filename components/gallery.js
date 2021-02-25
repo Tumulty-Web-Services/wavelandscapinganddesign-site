@@ -7,9 +7,7 @@ import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import styles from 'styles/Gallery.module.css';
 
-function MyVerticallyCenteredModal({
-  modalShow, setModalShow, currentPhoto,
-}) {
+function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
   return (
     <Modal
       show={modalShow}
@@ -55,7 +53,7 @@ export default function Gallery({ photos }) {
                         src: photo.src,
                         width: photo.width,
                         height: photo.height,
-                        alt: photo.alt
+                        alt: photo.alt,
                       });
                     }}
                   />
