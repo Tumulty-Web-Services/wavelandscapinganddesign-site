@@ -49,7 +49,7 @@ export default function ContactForm({ contactPage }) {
             <h4 className={contactPage ? 'text-dark mb-3' : 'text-white mb-3'}>
               Or fill out the form below, and we&apos;ll get back to you shortly!
             </h4>
-            <Form netlify>
+            <Form netlify="true">
               <Form.Row>
                 <Form.Label htmlFor="fullName" className={styles.srOnly}>
                   Name
