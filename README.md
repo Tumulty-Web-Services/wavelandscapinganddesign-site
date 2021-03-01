@@ -4,9 +4,11 @@ Website for Wavescaping & Design, LLC
 
 ## To do:
 
-1. continue to add gallery images left off on blue-rocks-red-driveway-palm-trees
-2. Set up Instagram social media component
-3. Landsape Designs - add unique landscape design images
-4. Configure form to redirect to gmail
-5. Test everyting in mobile & fix lil buggies
+### Pre launch
+1. Add social media section
+2. Fix up banners
+3. Finish image upload to cloudinary (blue-rocks-red-driveway-palm-trees), upload landscape design images in its own dir
+4. Mobile review
 
+### Post launch
+1. Configure forts to redirec to gmail
