@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import styles from 'styles/Gallery.module.css';
 
 function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
@@ -25,6 +26,12 @@ function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
           alt={currentPhoto.alt}
           className="p-0 m-0"
         />
+        <Button
+          variant="link"
+          onClick={() => setModalShow(false)}
+        >
+          Close
+        </Button>
       </Card>
     </Modal>
   );

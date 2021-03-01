@@ -7,90 +7,119 @@ import Col from 'react-bootstrap/Col';
 import styles from 'styles/Footer.module.css';
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className={styles.footerContainer}>
       <Container>
         <Row>
-          <Col sm={12} md={2}>
-            <div className="me-5">
-              <h4 className={styles.title}>Navigation</h4>
-              <ul className={`${styles.footerList} list-unstyled`}>
-                <li>
-                  <Link href="/services">
-                    <a>Services</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gallery">
-                    <a>Gallery</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers">
-                    <a>Careers</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact">
-                    <a>Contact</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/sitemap.xml">
-                    <a>Sitemaps</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy-policy">
-                    <a>Privacy Policy</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </Col>
-          <Col sm={12} md={2}>
-            <div>
-              <h4 className={styles.title}>Social Media</h4>
-              <ul className={`${styles.footerList} list-unstyled`}>
-                <li>
-                  <Link href="/services">
-                    <a>Facebook</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/gallery">
-                    <a>Instagram</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/careers">
-                    <a>Tik Tok</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </Col>
-          <Col sm={12} md={4}>
-          <h4 className={styles.title}>Contact</h4>
+          <Col sm={12} md={6} className="py-4">
+            <div className="d-flex flex-column flex-md-row">
+              <div className="me-5">
+                <h4 className={styles.title}>
+                  <small>Navigation</small>
+                </h4>
+                <ul className={`${styles.footerList} list-unstyled`}>
+                  <li>
+                    <Link href="/services">
+                      <small><a>Services</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gallery">
+                      <small><a>Gallery</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/careers">
+                      <small><a>Careers</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact">
+                      <small><a>Contact</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/sitemap.xml">
+                      <small><a>Sitemaps</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy">
+                      <small><a>Privacy Policy</a></small>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="me-5">
+                <h4 className={styles.title}>
+                  <small>Social Media</small>
+                </h4>
+                <ul className={`${styles.footerList} list-unstyled`}>
+                  <li>
+                    <Link href="/services">
+                      <small><a>Facebook</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/gallery">
+                      <small><a>Instagram</a></small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/careers">
+                      <small><a>Tik Tok</a></small>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className={styles.title}>
+                  <small>Contact</small>
+                </h4>
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <p className="mb-0 mt-3">
-                      <strong className={styles.blueTitle}>Email: </strong>
-                      wavelandscapingdesign@gmail.com
+                      <small>
+                        <strong className={styles.blueTitle}>Email: </strong>
+                        wavelandscapingdesign@gmail.com
+                      </small>
                     </p>
                     <p>
-                      <strong className={styles.blueTitle}>Phone: </strong>
-                      516-319-3145
+                      <small>
+                        <strong className={styles.blueTitle}>Phone: </strong>
+                        516-319-3145
+                      </small>
                     </p>
                     <p>
-                      <strong className={styles.blueTitle}>
-                        Based out of Palm Beach, Florida
-                      </strong>
+                      <small>
+                        <strong className={styles.blueTitle}>
+                          Based out of Palm Beach, Florida
+                        </strong>
+                      </small>
                     </p>
                   </li>
                 </ul>
+              </div>
+            </div>
           </Col>
-         
+          <Col sm={12} md={6}  className="py-4">
+            <Image
+              src="/images/west-palm-beach-1193x693.png"
+              alt="West Palm Beach, FL"
+              width={1193}
+              height={693}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12} className={`${styles.bottomFooter} px-0 pt-2`}>
+            Copyright ©️
+            {' '}
+            {year}
+            .
+            Content, including images, displayed on this website is protected by copyright laws. Downloading, republication, retransmission or reproduction of content on this website is strictly prohibited.
+          </Col>
         </Row>
       </Container>
     </footer>

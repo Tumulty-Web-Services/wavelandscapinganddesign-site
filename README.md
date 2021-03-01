@@ -9,5 +9,4 @@ Website for Wavescaping & Design, LLC
 3. Landsape Designs - add unique landscape design images
 4. Configure form to redirect to gmail
 5. Test everyting in mobile & fix lil buggies
-6. Make banner images perfect
-7. Fix up footer
+
