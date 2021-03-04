@@ -53,10 +53,10 @@ export async function getStaticProps() {
   return {
     props: {
       gallery:
-        landscapeDesignData.map((photo) => ({
+        landscapeDesignData.map((photo, index) => ({
           id: photo.ts,
           src: imageSourceFormatter(`/landscape-design/${photo.data.fileName}`),
-          alt: photo.data.alt,
+          alt: `design-${index}`,
           width: photo.data.width,
           height: photo.data.height,
         })) || [],
