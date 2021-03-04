@@ -53,7 +53,7 @@ export default function Careers() {
             </h4>
           </Col>
           <Col sm={12} md={{ span: 6, offset: 3 }} className="my-5">
-            <Form data-netlify="true">
+            <Form name="Careers" method="POST" data-netlify="true">
               <Form.Row>
                 <Form.Label htmlFor="fullName" className={styles.srOnly}>
                   Name
