@@ -88,7 +88,7 @@ export default function Careers() {
                     />
                   </label>
                   <label className={formStyles.label} htmlFor="resume">
-                    <span>Resume</span>
+                    <span className="d-block mb-1">Resume</span>
                     <input
                       id="resume"
                       name="resume"
