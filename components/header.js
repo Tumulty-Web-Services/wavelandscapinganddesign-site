@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from 'styles/Navbar.module.css';
@@ -58,33 +60,41 @@ export default function Header() {
         <Navbar collapseOnSelect expand="lg" className="py-0 my-0">
           <Navbar.Brand>
             <Link href="/">
-              <a className="d-flex">
-                <Image
-                  src={imageSourceFormatter('/various/Logo-40x40.png')}
-                  alt="Wave Landscaping & Design"
-                  height={20}
-                  width={60}
-                  layout="intrinsic"
-                  className={styles.borderRadius50}
-                />
-                <div className="ms-3">
-                  <h1 className={`my-0 py-0 ${styles.title}`}>
-                    <strong>Wave Landscaping & Design</strong>
-                  </h1>
-                  <h2 className={styles.subtitle}>
-                    <em>
-                      Your landscaping should transport you to your very own
-                      personal getaway
-                    </em>
-                  </h2>
-                </div>
+              <a>
+                <Row>
+                  <Col sm={12} md={1} className="me-4">
+                    <Image
+                      src={imageSourceFormatter('/various/Logo-40x40.png')}
+                      alt="Wave Landscaping & Design"
+                      height={60}
+                      width={60}
+                      layout="fixed"
+                      className={styles.borderRadius50}
+                    />
+
+                  </Col>
+                  <Col sm={12} md={10}>
+                    <div>
+                      <h1 className={`my-0 py-0 ${styles.title}`}>
+                        <strong>Wave Landscaping & Design</strong>
+                      </h1>
+                      <h2 className={styles.subtitle}>
+                        <em>
+                          Your landscaping should transport you to your very own
+                          personal getaway
+                        </em>
+                      </h2>
+                    </div>
+                  </Col>
+                </Row>
+
               </a>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end"
+            className="justify-content-end ms-5"
           >
             <Nav>
               <Nav.Item>

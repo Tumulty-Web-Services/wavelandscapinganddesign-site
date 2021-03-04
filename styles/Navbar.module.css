@@ -10,17 +10,28 @@
 
 .title {
   font-family: "Proxima Nova Bold";
-  font-size: 2rem;
+  font-size:1.3rem;
 }
 
 .subtitle {
   color: #444;
   font-family: "EBGaramond Italic";
-  font-size: 15px;
+  font-size: 13px;
   margin-top: -5px;
   display: block;
 }
 
+@media (min-width: 515px) {
+  .title {
+    font-size:2rem;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+/* font-size: 15px;
+font-size: 2rem; */
 @media (min-width: 1200px) {
   .socialMediaIcons {
     margin-bottom: -20px !important;

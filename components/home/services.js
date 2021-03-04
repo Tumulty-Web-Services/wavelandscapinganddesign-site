@@ -17,7 +17,7 @@ export default function Services() {
           </h3>
         </Col>
         <Col sm={12} md={4}>
-          <Card>
+          <Card className="mb-3">
             <Card.Body className="text-center">
               <Link href="/services/#lawn-maintenance">
                 <a>
@@ -40,7 +40,7 @@ export default function Services() {
           </Card>
         </Col>
         <Col sm={12} md={4}>
-          <Card>
+          <Card className="mb-3">
             <Card.Body className="text-center">
               <Link href="/services/#landscape-design">
                 <a>
@@ -63,7 +63,7 @@ export default function Services() {
           </Card>
         </Col>
         <Col sm={12} md={4}>
-          <Card>
+          <Card className="mb-3">
             <Card.Body className="text-center">
               <Link href="/services/#irrigation-services">
                 <a>
