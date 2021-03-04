@@ -1,5 +1,5 @@
 .banner {
-  background: url(../public/images/banner-2000x1129.jpg)
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(/images/HomePageBannerReduced.jpg)
     no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

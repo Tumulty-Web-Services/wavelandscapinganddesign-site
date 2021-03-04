@@ -1,3 +1,3 @@
 export default function SocialMedia() {
-  return <div>Use SWR to fetch latest instagram posts :)</div>;
+  return <div className="text-center display-4 my-5">Instagram feed will go here :) </div>;
 }

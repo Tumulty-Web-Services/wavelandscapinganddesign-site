@@ -64,7 +64,7 @@ export default function Header() {
                 <Row>
                   <Col sm={12} md={1} className="me-4">
                     <Image
-                      src={imageSourceFormatter('/various/Logo-40x40.png')}
+                      src={imageSourceFormatter('/various/Logo-80x80.jpg')}
                       alt="Wave Landscaping & Design"
                       height={60}
                       width={60}
