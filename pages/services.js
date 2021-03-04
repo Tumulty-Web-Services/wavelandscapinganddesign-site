@@ -46,7 +46,7 @@ export default function Services() {
         <ServiceDescriptionLeft
           title="Commercial Landscaping"
           content="Sunshine Landscapers works with various companies to ensure commercial properties look nothing less than perfect."
-          image="/images/services/commercial-landscaping.png"
+          image="commercial-landscaping.jpg"
           width={700}
           height={393}
           link="commercial-landscaping"
@@ -54,7 +54,7 @@ export default function Services() {
         <ServiceDescriptionRight
           title="Landscape Design"
           content="Sunshine Landscapers provides landscape design sketches personalized for each client. We work closely with our clients throughout the design process to install day, ensuring their vision is executed."
-          image="/images/services/landscape-design.png"
+          image="landscape-design.jpg"
           width={700}
           height={466}
           link="landscape-design"
@@ -62,7 +62,7 @@ export default function Services() {
         <ServiceDescriptionLeft
           title="Lawn Maintenance"
           content="Includes cutting the grass, edging, trimming of any trees, shrubs or plants under 6 ft., spring, and fall clean up, complimentary sprinkler checks, and weed and feed."
-          image="/images/services/lawn-maintenance.png"
+          image="lawn-maintenance.jpg"
           width={700}
           height={603}
           link="lawn-maintenance"
@@ -70,7 +70,7 @@ export default function Services() {
         <ServiceDescriptionRight
           title="Hurricane Cleanup"
           content="Hurricanes can leave small messes or large chaos. We will help you get your yard back in order."
-          image="/images/services/hurricane-cleanup.png"
+          image="hurricane-cleanup.jpg"
           width={700}
           height={466}
           link="hurricane-cleanup"
@@ -78,7 +78,7 @@ export default function Services() {
         <ServiceDescriptionLeft
           title="Irrigation"
           content="Offering sprinkler checks and system repairs"
-          image="/images/services/irrigation.png"
+          image="irrigation.jpg"
           width={700}
           height={466}
           link="irrigation"
@@ -86,7 +86,7 @@ export default function Services() {
         <ServiceDescriptionRight
           title="Tree Services"
           content="From trimming palm to removal of trees"
-          image="/images/services/tree-services.png"
+          image="tree-services.jpg"
           width={700}
           height={525}
           link="tree-services"
@@ -94,7 +94,7 @@ export default function Services() {
         <ServiceDescriptionLeft
           title="Residential Landscaping"
           content="From weekly maintenance, design, irrigation, tree services, to mulch, we will work endlessly to exceed your landscape expectations."
-          image="/images/services/residential.png"
+          image="residential.jpg"
           width={640}
           height={470}
           link="residential"

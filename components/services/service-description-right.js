@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import styles from 'styles/Service.module.css';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function ServiceDescriptionRight({
   title,
@@ -30,7 +31,9 @@ export default function ServiceDescriptionRight({
       </Col>
       <Col sm={12} md={6} className="mb-5">
         <Image
-          src={image}
+          src={imageSourceFormatter(
+            `/services/${image}`,
+          )}
           width={width}
           height={height}
           alt={title}

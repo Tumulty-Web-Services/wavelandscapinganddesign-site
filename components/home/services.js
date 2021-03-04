@@ -69,7 +69,7 @@ export default function Services() {
         <Col sm={12} md={4}>
           <Card className="mb-3">
             <Card.Body className="text-center">
-              <Link href="/services/#irrigation-services">
+              <Link href="/services/#irrigation">
                 <a>
                   <Image
                     src={imageSourceFormatter('/service-icons/irrigation.jpg')}

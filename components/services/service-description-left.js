@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import styles from 'styles/Service.module.css';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function ServiceDescriptionLeft({
   title,
@@ -15,7 +16,9 @@ export default function ServiceDescriptionLeft({
     <Row className="my-4" id={link}>
       <Col sm={12} md={6}>
         <Image
-          src={image}
+          src={imageSourceFormatter(
+            `/services/${image}`,
+          )}
           width={width}
           height={height}
           alt={title}
