@@ -2,10 +2,9 @@
 
 Website for Wavescaping & Design, LLC
 
-### Pre launch
+### To Do
 
 1. Add social media section
+2. Add domain
 
-### Post launch
 
-1. Configure forts to redirect to gmail
