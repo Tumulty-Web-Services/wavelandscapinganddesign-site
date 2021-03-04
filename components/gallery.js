@@ -51,6 +51,7 @@ export default function Gallery({ photos }) {
                     src={`https://res.cloudinary.com/tumulty-web-services/image/upload/${photo.src}`}
                     style={{ overflow: 'hidden' }}
                     className={styles.galleryImage}
+                    alt={photo.alt}
                     onClick={() => {
                       setModalShow(true);
                       setCurrentPhoto({

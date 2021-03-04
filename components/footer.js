@@ -22,44 +22,55 @@ export default function Footer() {
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <Link href="/services">
-                      <small>
-                        <a>Services</a>
-                      </small>
+                      <a>
+                        <small>
+                          Services
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
-                      <small>
-                        <a>Gallery</a>
-                      </small>
+                      <a>
+                        <small>
+                          Gallery
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/careers">
-                      <small>
-                        <a>Careers</a>
-                      </small>
+                      <a>
+                        {' '}
+                        <small>
+                          Careers
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <small>
-                        <a>Contact</a>
-                      </small>
+                      <a>
+                        <small>
+                          Contact
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/sitemap.xml">
+                    <a href="/sitemap.xml">
                       <small>
-                        <a>Sitemaps</a>
+                        Sitemap.xml
                       </small>
-                    </Link>
+                    </a>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
-                      <small>
-                        <a>Privacy Policy</a>
-                      </small>
+                      <a>
+                        <small>
+                          Privacy Policy
+                        </small>
+                      </a>
                     </Link>
                   </li>
                 </ul>
@@ -70,24 +81,32 @@ export default function Footer() {
                 </h4>
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
-                    <Link href="/services">
-                      <small>
-                        <a>Facebook</a>
-                      </small>
+                    <Link href="https://www.facebook.com/wavelandscapingdesign">
+                      <a>
+                        <small>
+                          Facebook
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/gallery">
-                      <small>
-                        <a>Instagram</a>
-                      </small>
+                    <Link href="https://www.instagram.com/wavelandscapingdesign">
+                      <a>
+                        {' '}
+                        <small>
+                          Instagram
+                        </small>
+                      </a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/careers">
-                      <small>
-                        <a>Tik Tok</a>
-                      </small>
+                    <Link href="https://www.tiktok.com/@wavelandscapingdesign">
+                      <a>
+                        {' '}
+                        <small>
+                          Tik Tok
+                        </small>
+                      </a>
                     </Link>
                   </li>
                 </ul>
