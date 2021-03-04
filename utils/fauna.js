@@ -15,4 +15,19 @@ const getGalleryPhotos = async () => {
   return gallery;
 };
 
-export default getGalleryPhotos;
+const getLandScapeDesignPhotos = async () => {
+  const { data } = await faunaClient.query(
+    q.Map(
+      q.Paginate(q.Documents(q.Collection('landscape-designs'))),
+      q.Lambda('ref', q.Get(q.Var('ref'))),
+    ),
+  );
+  const gallery = data.map((photo) => photo);
+
+  return gallery;
+};
+
+export {
+  getGalleryPhotos,
+  getLandScapeDesignPhotos,
+};

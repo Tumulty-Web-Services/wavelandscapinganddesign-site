@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Banner from 'components/pages/banner';
 import GalleryGrid from 'components/gallery';
 import FooterContact from 'components/pages/footer-contact';
-import getGalleryPhotos from 'utils/fauna';
+import { getLandScapeDesignPhotos } from 'utils/fauna';
 import imageSourceFormatter from 'utils/image-source-format';
 
 export default function LandscapeDesigns({ gallery }) {
@@ -48,18 +48,18 @@ export default function LandscapeDesigns({ gallery }) {
 }
 
 export async function getStaticProps() {
-  const galleryData = await getGalleryPhotos();
+  const landscapeDesignData = await getLandScapeDesignPhotos();
 
   return {
     props: {
       gallery:
-        galleryData.map((photo) => ({
-          id: photo.ts,
-          src: imageSourceFormatter(`/gallery/${photo.data.fileName}`),
-          alt: photo.data.alt,
-          width: photo.data.width,
-          height: photo.data.height,
-        })) || [],
+      landscapeDesignData.map((photo) => ({
+        id: photo.ts,
+        src: imageSourceFormatter(`/landscape-desgins/${photo.data.fileName}`),
+        alt: photo.data.fileName,
+        width: photo.data.width,
+        height: photo.data.height,
+      })) || [],
     },
   };
 }

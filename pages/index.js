@@ -5,7 +5,7 @@ import GalleryGrid from 'components/gallery';
 import SocialMedia from 'components/home/social-media';
 import TitleAndButton from 'components/home/title-and-button';
 import styles from 'styles/Home.module.css';
-import getGalleryPhotos from 'utils/fauna';
+import { getGalleryPhotos } from 'utils/fauna';
 import imageSourceFormatter from 'utils/image-source-format';
 
 export default function Home({ gallery }) {

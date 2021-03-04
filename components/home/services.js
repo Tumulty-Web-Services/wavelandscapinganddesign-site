@@ -22,9 +22,7 @@ export default function Services() {
               <Link href="/services/#lawn-maintenance">
                 <a>
                   <Image
-                    src={imageSourceFormatter(
-                      '/service-icons/lawn-maintanence.png',
-                    )}
+                    src={imageSourceFormatter('/service-icons/lawn-maintanence.png')}
                     alt="lawn maintanence"
                     width={220}
                     height={192}
@@ -32,7 +30,7 @@ export default function Services() {
                   />
                   <h4>Lawn maintenance</h4>
                   <hr className="mx-5" />
-                  <p className="text-center px-4">
+                  <p className="text-center px-4 pb-4">
                     Achieve a greener lawn with lawn care services from our
                     team.
                   </p>
@@ -47,9 +45,7 @@ export default function Services() {
               <Link href="/services/#landscape-design">
                 <a>
                   <Image
-                    src={imageSourceFormatter(
-                      '/service-icons/landscape-design.png',
-                    )}
+                    src={imageSourceFormatter('/service-icons/landscape-design.png')}
                     alt="landscape desgin"
                     width={220}
                     height={206}
@@ -57,7 +53,7 @@ export default function Services() {
                   />
                   <h4>Landscape Desgin</h4>
                   <hr className="mx-5" />
-                  <p className="text-center px-4">
+                  <p className="text-center px-4 pb-2">
                     Endless ideas for customizing your personal resort or your
                     backyard.
                   </p>
