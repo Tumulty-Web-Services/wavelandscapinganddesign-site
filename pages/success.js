@@ -8,11 +8,11 @@ export default function Success() {
   return (
     <Container className="py-5 my-5">
       <Row>
-        <Col sm={12} md={{span: 6, offset:3}}>
+        <Col sm={12} md={{ span: 6, offset: 3 }}>
           <h2 className="display-4">Thank you for reaching out!</h2>
           <h4 className="text-center">
             <span className="lead">
-              We'll be reaching out to you shortly about your inquiry.
+              We&apos;ll be reaching out to you shortly about your inquiry.
             </span>
             {' '}
             <strong>Have a great day!</strong>

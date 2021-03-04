@@ -51,7 +51,7 @@ export default function ContactForm({ contactPage }) {
               Or fill out the form below, and we&apos;ll get back to you
               shortly!
             </h4>
-            <form name="Contact" action="/success" netlify>
+            <form name="Contact" action="/success" method="POST" netlify>
               <Row>
                 <Col sm={12}>
                   <label className={formStyles.label} htmlFor="fullName">
