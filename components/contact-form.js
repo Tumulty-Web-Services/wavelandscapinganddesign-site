@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import styles from 'styles/SrOnly.module.css';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function ContactForm({ contactPage }) {
   return (
@@ -37,7 +38,7 @@ export default function ContactForm({ contactPage }) {
             </li>
           </ul>
           <Image
-            src="/images/sam-barnwell.jpg"
+            src={imageSourceFormatter('/various/sam-barnwell.jpg')}
             alt="Sam Barnwell"
             width={827}
             height={472}
