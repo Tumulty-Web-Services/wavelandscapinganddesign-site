@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from 'styles/Footer.module.css';
+import imageSourceFormatter from 'utils/image-source-format';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -21,32 +22,44 @@ export default function Footer() {
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <Link href="/services">
-                      <small><a>Services</a></small>
+                      <small>
+                        <a>Services</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
-                      <small><a>Gallery</a></small>
+                      <small>
+                        <a>Gallery</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/careers">
-                      <small><a>Careers</a></small>
+                      <small>
+                        <a>Careers</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <small><a>Contact</a></small>
+                      <small>
+                        <a>Contact</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/sitemap.xml">
-                      <small><a>Sitemaps</a></small>
+                      <small>
+                        <a>Sitemaps</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
-                      <small><a>Privacy Policy</a></small>
+                      <small>
+                        <a>Privacy Policy</a>
+                      </small>
                     </Link>
                   </li>
                 </ul>
@@ -58,17 +71,23 @@ export default function Footer() {
                 <ul className={`${styles.footerList} list-unstyled`}>
                   <li>
                     <Link href="/services">
-                      <small><a>Facebook</a></small>
+                      <small>
+                        <a>Facebook</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
-                      <small><a>Instagram</a></small>
+                      <small>
+                        <a>Instagram</a>
+                      </small>
                     </Link>
                   </li>
                   <li>
                     <Link href="/careers">
-                      <small><a>Tik Tok</a></small>
+                      <small>
+                        <a>Tik Tok</a>
+                      </small>
                     </Link>
                   </li>
                 </ul>
@@ -103,9 +122,11 @@ export default function Footer() {
               </div>
             </div>
           </Col>
-          <Col sm={12} md={6}  className="py-4">
+          <Col sm={12} md={6} className="py-4">
             <Image
-              src="/images/west-palm-beach-1193x693.png"
+              src={imageSourceFormatter(
+                '/various/west-palm-beach-1193x693.jpg',
+              )}
               alt="West Palm Beach, FL"
               width={1193}
               height={693}
@@ -117,8 +138,10 @@ export default function Footer() {
             Copyright ©️
             {' '}
             {year}
-            .
-            Content, including images, displayed on this website is protected by copyright laws. Downloading, republication, retransmission or reproduction of content on this website is strictly prohibited.
+            . Content, including images, displayed on this
+            website is protected by copyright laws. Downloading, republication,
+            retransmission or reproduction of content on this website is
+            strictly prohibited.
           </Col>
         </Row>
       </Container>

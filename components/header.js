@@ -19,7 +19,7 @@ export default function Header() {
               <a>
                 <Image
                   src={imageSourceFormatter(
-                    '/social-media-icons/facebook-40x40.png',
+                    '/social-media-icons/facebook-40x40.jpg',
                   )}
                   height={25}
                   width={25}
@@ -33,7 +33,7 @@ export default function Header() {
               <a>
                 <Image
                   src={imageSourceFormatter(
-                    '/social-media-icons/instagram-40x40.png',
+                    '/social-media-icons/instagram-40x40.jpg',
                   )}
                   height={25}
                   width={25}
@@ -47,7 +47,7 @@ export default function Header() {
               <a>
                 <Image
                   src={imageSourceFormatter(
-                    '/social-media-icons/tiktok-40x40.png',
+                    '/social-media-icons/tiktok-40x40.jpg',
                   )}
                   height={25}
                   width={25}
@@ -71,7 +71,6 @@ export default function Header() {
                       layout="fixed"
                       className={styles.borderRadius50}
                     />
-
                   </Col>
                   <Col sm={12} md={10}>
                     <div>
@@ -87,7 +86,6 @@ export default function Header() {
                     </div>
                   </Col>
                 </Row>
-
               </a>
             </Link>
           </Navbar.Brand>

@@ -47,7 +47,8 @@ export default function ContactForm({ contactPage }) {
         <Col sm={12} md={5}>
           <div className="p-3">
             <h4 className={contactPage ? 'text-dark mb-3' : 'text-white mb-3'}>
-              Or fill out the form below, and we&apos;ll get back to you shortly!
+              Or fill out the form below, and we&apos;ll get back to you
+              shortly!
             </h4>
             <Form netlify="true">
               <Form.Row>

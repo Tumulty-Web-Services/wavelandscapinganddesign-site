@@ -26,10 +26,7 @@ function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
           alt={currentPhoto.alt}
           className="p-0 m-0"
         />
-        <Button
-          variant="link"
-          onClick={() => setModalShow(false)}
-        >
+        <Button variant="link" onClick={() => setModalShow(false)}>
           Close
         </Button>
       </Card>
@@ -51,7 +48,7 @@ export default function Gallery({ photos }) {
                 <Card style={{ maxHeight: '300px' }}>
                   <Card.Img
                     variant="top"
-                    src={photo.src}
+                    src={`https://res.cloudinary.com/tumulty-web-services/image/upload/${photo.src}`}
                     style={{ overflow: 'hidden' }}
                     className={styles.galleryImage}
                     onClick={() => {

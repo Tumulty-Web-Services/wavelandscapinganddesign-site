@@ -10,7 +10,7 @@
 
 .title {
   font-family: "Proxima Nova Bold";
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
 
 .subtitle {
@@ -23,7 +23,7 @@
 
 @media (min-width: 515px) {
   .title {
-    font-size:2rem;
+    font-size: 2rem;
   }
   .subtitle {
     font-size: 15px;

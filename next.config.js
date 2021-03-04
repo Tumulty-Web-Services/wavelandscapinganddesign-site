@@ -1,6 +1,7 @@
 module.exports = {
   images: {
-    domains: ['res.cloudinary.com'],
+    loader: 'cloudinary',
+    path: 'https://res.cloudinary.com/tumulty-web-services/image/upload',
   },
   target: 'serverless',
   webpack: (config, { isServer }) => {

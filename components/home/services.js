@@ -22,7 +22,9 @@ export default function Services() {
               <Link href="/services/#lawn-maintenance">
                 <a>
                   <Image
-                    src={imageSourceFormatter('/service-icons/lawn-maintanence.png')}
+                    src={imageSourceFormatter(
+                      '/service-icons/lawn-maintanence.jpg',
+                    )}
                     alt="lawn maintanence"
                     width={220}
                     height={192}
@@ -45,7 +47,9 @@ export default function Services() {
               <Link href="/services/#landscape-design">
                 <a>
                   <Image
-                    src={imageSourceFormatter('/service-icons/landscape-design.png')}
+                    src={imageSourceFormatter(
+                      '/service-icons/landscape-design.jpg',
+                    )}
                     alt="landscape desgin"
                     width={220}
                     height={206}
@@ -68,7 +72,7 @@ export default function Services() {
               <Link href="/services/#irrigation-services">
                 <a>
                   <Image
-                    src={imageSourceFormatter('/service-icons/irrigation.png')}
+                    src={imageSourceFormatter('/service-icons/irrigation.jpg')}
                     alt="irrigation"
                     width={220}
                     height={191}

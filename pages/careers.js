@@ -46,7 +46,11 @@ export default function Careers() {
       <Container>
         <Row>
           <Col sm={12} className="mt-5 text-center">
-            <h4>Interested in a career with Sunshine Landscapers? We are always looking for crew members and crew leaders. Please fill out the form below and we will be in touch!</h4>
+            <h4>
+              Interested in a career with Sunshine Landscapers? We are always
+              looking for crew members and crew leaders. Please fill out the
+              form below and we will be in touch!
+            </h4>
           </Col>
           <Col sm={12} md={{ span: 6, offset: 3 }} className="my-5">
             <Form netlify>
@@ -87,17 +91,15 @@ export default function Careers() {
                 />
               </Form.Row>
               <Form.Row>
-                <Form.Label htmlFor="resume">
-                  Upload Resume
-                </Form.Label>
-                <Form.File
-                  id="resume"
-                  name="resume"
-                  custom
-                  className="mb-5"
-                />
+                <Form.Label htmlFor="resume">Upload Resume</Form.Label>
+                <Form.File id="resume" name="resume" custom className="mb-5" />
               </Form.Row>
-              <Button variant="primary" size="lg" type="submit" className="px-5 mx-auto text-center d-block">
+              <Button
+                variant="primary"
+                size="lg"
+                type="submit"
+                className="px-5 mx-auto text-center d-block"
+              >
                 Submit
               </Button>
             </Form>

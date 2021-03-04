@@ -1,3 +1,4 @@
-const imageSourceFormatter = (fileName) => `https://res.cloudinary.com/tumulty-web-services/image/upload/wavelandscapinganddesign${fileName}`;
+import image from 'next/image';
 
+const imageSourceFormatter = (fileName) => `/wavelandscapinganddesign${fileName}`;
 export default imageSourceFormatter;

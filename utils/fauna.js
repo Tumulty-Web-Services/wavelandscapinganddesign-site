@@ -27,7 +27,4 @@ const getLandScapeDesignPhotos = async () => {
   return gallery;
 };
 
-export {
-  getGalleryPhotos,
-  getLandScapeDesignPhotos,
-};
+export { getGalleryPhotos, getLandScapeDesignPhotos };
