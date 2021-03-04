@@ -53,7 +53,8 @@ export default function Careers() {
             </h4>
           </Col>
           <Col sm={12} md={{ span: 6, offset: 3 }} className="my-5">
-            <form name="Contact" action="/success" method="POST" netlify>
+            <form name="careers" action="/success" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="careers" />
               <Row>
                 <Col sm={12}>
                   <label className={formStyles.label} htmlFor="fullName">
