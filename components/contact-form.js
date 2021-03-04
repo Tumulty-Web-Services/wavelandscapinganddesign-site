@@ -1,15 +1,13 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import styles from 'styles/SrOnly.module.css';
+import formStyles from 'styles/Forms.module.css';
 import imageSourceFormatter from 'utils/image-source-format';
 
 export default function ContactForm({ contactPage }) {
-  const router = useRouter();
   return (
     <Container className="my-5">
       <Row>
@@ -53,60 +51,57 @@ export default function ContactForm({ contactPage }) {
               Or fill out the form below, and we&apos;ll get back to you
               shortly!
             </h4>
-            <Form name="Contact" action={`${router.asPath}?form=success`} method="POST" data-netlify="true">
-              <Form.Row>
-                <Form.Label htmlFor="fullName" className={styles.srOnly}>
-                  Name
-                </Form.Label>
-                <Form.Control
-                  name="fullName"
-                  className="mb-4"
-                  id="fullName"
-                  type="text"
-                  placeholder="Full name"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="email" className={styles.srOnly}>
-                  Email
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="email" className={styles.srOnly}>
-                  Phone
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="phone"
-                  type="phone"
-                  name="phone"
-                  placeholder="Phone number"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="email" className={styles.srOnly}>
-                  Message
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="message"
-                  as="textarea"
-                  rows={8}
-                  name="message"
-                  placeholder="Message"
-                />
-              </Form.Row>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
+            <form name="Contact" action="/success" method="POST" data-netlify="true">
+              <Row>
+                <Col sm={12}>
+                  <label className={formStyles.label} htmlFor="fullName">
+                    <span className={styles.srOnly}>Full Name</span>
+                    <input
+                      id="fullName"
+                      name="fullName"
+                      className="p-2 w-100"
+                      type="text"
+                      placeholder="Full name"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="email">
+                    <span className={styles.srOnly}>Email</span>
+                    <input
+                      id="email"
+                      name="email"
+                      className="p-2 w-100"
+                      type="email"
+                      placeholder="Email address"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="phone">
+                    <span className={styles.srOnly}>Phone</span>
+                    <input
+                      id="phone"
+                      name="phone"
+                      className="p-2 w-100"
+                      type="phone"
+                      placeholder="Phone number"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="message">
+                    <span className={styles.srOnly}>Message</span>
+                    <textarea
+                      className="p-2 w-100"
+                      rows="4"
+                      cols="50"
+                      name="message"
+                      placeholder="Message"
+                    />
+                  </label>
+                </Col>
+                <Col sm={12}>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Col>
+              </Row>
+            </form>
           </div>
         </Col>
       </Row>

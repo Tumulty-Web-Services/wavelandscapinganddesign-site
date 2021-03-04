@@ -2,10 +2,10 @@ import Head from 'next/head';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Banner from 'components/pages/banner';
 import FooterContact from 'components/pages/footer-contact';
+import formStyles from 'styles/Forms.module.css';
 import styles from 'styles/SrOnly.module.css';
 
 export default function Careers() {
@@ -53,56 +53,56 @@ export default function Careers() {
             </h4>
           </Col>
           <Col sm={12} md={{ span: 6, offset: 3 }} className="my-5">
-            <Form name="Careers" method="POST" data-netlify="true">
-              <Form.Row>
-                <Form.Label htmlFor="fullName" className={styles.srOnly}>
-                  Name
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="fullName"
-                  name="name"
-                  type="text"
-                  placeholder="Full name"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="email" className={styles.srOnly}>
-                  Email
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="phone" className={styles.srOnly}>
-                  Phone
-                </Form.Label>
-                <Form.Control
-                  className="mb-4"
-                  id="phone"
-                  name="phone"
-                  type="phone"
-                  placeholder="Phone number"
-                />
-              </Form.Row>
-              <Form.Row>
-                <Form.Label htmlFor="resume">Upload Resume</Form.Label>
-                <Form.File id="resume" name="resume" custom className="mb-5" />
-              </Form.Row>
-              <Button
-                variant="primary"
-                size="lg"
-                type="submit"
-                className="px-5 mx-auto text-center d-block"
-              >
-                Submit
-              </Button>
-            </Form>
+            <form name="Contact" action="/success" method="POST" data-netlify="true">
+              <Row>
+                <Col sm={12}>
+                  <label className={formStyles.label} htmlFor="fullName">
+                    <span className={styles.srOnly}>Full Name</span>
+                    <input
+                      id="fullName"
+                      name="fullName"
+                      className="p-2 w-100"
+                      type="text"
+                      placeholder="Full name"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="email">
+                    <span className={styles.srOnly}>Email</span>
+                    <input
+                      id="email"
+                      name="email"
+                      className="p-2 w-100"
+                      type="email"
+                      placeholder="Email address"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="phone">
+                    <span className={styles.srOnly}>Phone</span>
+                    <input
+                      id="phone"
+                      name="phone"
+                      className="p-2 w-100"
+                      type="phone"
+                      placeholder="Phone number"
+                    />
+                  </label>
+                  <label className={formStyles.label} htmlFor="resume">
+                    <span>Resume</span>
+                    <input
+                      id="resume"
+                      name="resume"
+                      className="p-2 w-100"
+                      type="file"
+                    />
+                  </label>
+                </Col>
+                <Col sm={12}>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Col>
+              </Row>
+            </form>
           </Col>
         </Row>
       </Container>
