@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,6 +9,7 @@ import styles from 'styles/SrOnly.module.css';
 import imageSourceFormatter from 'utils/image-source-format';
 
 export default function ContactForm({ contactPage }) {
+  const router = useRouter();
   return (
     <Container className="my-5">
       <Row>
@@ -51,12 +53,13 @@ export default function ContactForm({ contactPage }) {
               Or fill out the form below, and we&apos;ll get back to you
               shortly!
             </h4>
-            <Form name="Contact" action="/careers?form=success" method="POST" data-netlify="true">
+            <Form name="Contact" action={`${router.asPath}?form=success`} method="POST" data-netlify="true">
               <Form.Row>
                 <Form.Label htmlFor="fullName" className={styles.srOnly}>
                   Name
                 </Form.Label>
                 <Form.Control
+                  name="fullName"
                   className="mb-4"
                   id="fullName"
                   type="text"
@@ -71,6 +74,7 @@ export default function ContactForm({ contactPage }) {
                   className="mb-4"
                   id="email"
                   type="email"
+                  name="email"
                   placeholder="Email address"
                 />
               </Form.Row>
@@ -82,6 +86,7 @@ export default function ContactForm({ contactPage }) {
                   className="mb-4"
                   id="phone"
                   type="phone"
+                  name="phone"
                   placeholder="Phone number"
                 />
               </Form.Row>
@@ -94,6 +99,7 @@ export default function ContactForm({ contactPage }) {
                   id="message"
                   as="textarea"
                   rows={8}
+                  name="message"
                   placeholder="Message"
                 />
               </Form.Row>
