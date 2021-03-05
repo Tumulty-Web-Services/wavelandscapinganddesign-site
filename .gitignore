@@ -4,3 +4,5 @@ node_modules/*
 .env
 out_functions
 out_publish
+# Local Netlify folder
+.netlify
