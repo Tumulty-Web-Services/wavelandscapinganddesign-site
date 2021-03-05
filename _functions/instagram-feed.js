@@ -10,7 +10,9 @@ exports.handler = async () => {
       statusCode: 200,
       body: JSON.stringify({
         status: 200,
-        body: request.data.filter((_, i) => i <= 9 && _.media_type === 'IMAGE'),
+        url,
+        request,
+        // body: request.data.filter((_, i) => i <= 9 && _.media_type === 'IMAGE'),
         msg: 'Here are the latest Instagram posts',
       }),
     };
