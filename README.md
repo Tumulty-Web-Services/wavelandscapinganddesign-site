@@ -2,9 +2,10 @@
 
 Website for Wavescaping & Design, LLC
 
+[Live Site](https://wavelandscapinganddesign.com)
+
 ### To Do
 
-1. Add social media section
-2. Add domain
+1. Make social media section look nice!
 
 
