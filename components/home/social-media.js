@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useSWR from 'swr';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -5,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Carousel from 'react-multi-carousel';
 import TitleAndButton from 'components/home/title-and-button';
+import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia() {
@@ -34,7 +36,6 @@ export default function SocialMedia() {
     },
   };
 
-  console.log({ response: data.body });
   return (
     <Container>
       <Row>
@@ -62,6 +63,32 @@ export default function SocialMedia() {
               link="/contact"
               label="Connect Now"
             />
+            <div className="d-flex justify-content-center my-4">
+              <a href="https://www.facebook.com/wavelandscapingdesign" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={imageSourceFormatter('/social-media-icons/FB-250x250.jpg')}
+                  width={50}
+                  height={50}
+                  alt="Facebook"
+                />
+              </a>
+              <a href="https://www.instagram.com/wavelandscapingdesign" target="_blank" className="mx-4" rel="noopener noreferrer">
+                <Image
+                  src={imageSourceFormatter('/social-media-icons/Instagram-250x250.jpg')}
+                  width={50}
+                  height={50}
+                  alt="Facebook"
+                />
+              </a>
+              <a href="https://www.tiktok.com/@wavelandscapingdesign" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={imageSourceFormatter('/social-media-icons/TikTok-245x268.jpg')}
+                  width={50}
+                  height={50}
+                  alt="Facebook"
+                />
+              </a>
+            </div>
           </div>
         </Col>
       </Row>
