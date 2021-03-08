@@ -3,7 +3,6 @@ import useSWR from 'swr';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import Carousel from 'react-multi-carousel';
 import TitleAndButton from 'components/home/title-and-button';
 import imageSourceFormatter from 'utils/image-source-format';
@@ -46,16 +45,22 @@ export default function SocialMedia() {
                 <strong>@wavelandscapingdesign</strong>
               </a>
             </h3>
-            <Carousel className="text-center my-3" infinite responsive={responsive}>
+            <Carousel className="text-center mt-3 mb-5" infinite responsive={responsive}>
               {data.body.map((post) => (
-                <Card key={post.id} style={{ width: '25rem' }}>
-                  <Card.Img variant="top" src={post.media_url} style={{ height: '300px' }} />
-                  <Card.Body>
-                    <Card.Text>
-                      {post.caption}
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
+                <div key={post.id} className="px-3">
+                  <div
+                    style={{
+                      backgroundImage: `url(${post.media_url})`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center center',
+                      backgroundSize: 'cover',
+                      height: '600px',
+                      width: '400px',
+                      borderRadius: '5px'
+                    }}
+                  />
+                  <span className="mt-2 d-block">{post.caption}</span>
+                </div>
               ))}
             </Carousel>
             <TitleAndButton
@@ -63,7 +68,7 @@ export default function SocialMedia() {
               link="/contact"
               label="Connect Now"
             />
-            <div className="d-flex justify-content-center my-4">
+            <div className="d-flex justify-content-center my-5">
               <a href="https://www.facebook.com/wavelandscapingdesign" target="_blank" rel="noopener noreferrer">
                 <Image
                   src={imageSourceFormatter('/social-media-icons/FB-250x250.jpg')}
@@ -93,6 +98,5 @@ export default function SocialMedia() {
         </Col>
       </Row>
     </Container>
-
   );
 }
