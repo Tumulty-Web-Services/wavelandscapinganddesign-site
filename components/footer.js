@@ -60,7 +60,7 @@ export default function Footer() {
                   <li>
                     <a href="/sitemap.xml">
                       <small>
-                        Sitemap.xml
+                        Sitemap
                       </small>
                     </a>
                   </li>
