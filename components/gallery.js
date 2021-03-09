@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import styles from 'styles/Gallery.module.css';
 
 function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
   return (
@@ -43,26 +42,40 @@ export default function Gallery({ photos }) {
       <Container className="mb-5">
         <Row>
           {photos
-            && photos.map((photo) => (
-              <Col key={photo.id} sm={12} md={4} className="m-0 p-0">
-                <Card style={{ maxHeight: '300px' }}>
-                  <Card.Img
-                    variant="top"
-                    src={`https://res.cloudinary.com/tumulty-web-services/image/upload/${photo.src}`}
-                    style={{ overflow: 'hidden' }}
-                    className={styles.galleryImage}
-                    alt={photo.alt}
-                    onClick={() => {
-                      setModalShow(true);
-                      setCurrentPhoto({
-                        src: photo.src,
-                        width: photo.width,
-                        height: photo.height,
-                        alt: photo.alt,
-                      });
-                    }}
-                  />
-                </Card>
+            && photos.map((photo, index) => (
+              <Col key={photo.id} sm={12} md={4} className="my-1 px-1">
+                <div
+                  tabIndex="0"
+                  role="button"
+                  aria-label={`photo-${index}`}
+                  style={{
+                    backgroundImage: `url(${`https://res.cloudinary.com/tumulty-web-services/image/upload/${photo.src}`})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center center',
+                    backgroundSize: 'cover',
+                    height: '300px',
+                    width: '100%',
+                    borderRadius: '5px',
+                  }}
+                  onClick={() => {
+                    setModalShow(true);
+                    setCurrentPhoto({
+                      src: photo.src,
+                      width: photo.width,
+                      height: photo.height,
+                      alt: photo.alt,
+                    });
+                  }}
+                  onKeyPress={() => {
+                    setModalShow(true);
+                    setCurrentPhoto({
+                      src: photo.src,
+                      width: photo.width,
+                      height: photo.height,
+                      alt: photo.alt,
+                    });
+                  }}
+                />
               </Col>
             ))}
           <MyVerticallyCenteredModal
