@@ -14,47 +14,56 @@ export default function Header() {
     <header className="my-4">
       <Container>
         <Nav className={`${styles.socialMediaIcons} justify-content-end`}>
-          <Nav.Item className="mx-2">
-            <Link href="https://www.facebook.com/wavelandscapingdesign">
-              <a>
-                <Image
-                  src={imageSourceFormatter(
-                    '/social-media-icons/facebook-40x40.jpg',
-                  )}
-                  height={25}
-                  width={25}
-                  alt="facebook"
-                />
-              </a>
-            </Link>
+          <Nav.Item>
+            <Nav.Link
+              className="px-1"
+              href="https://www.facebook.com/wavelandscapingdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={imageSourceFormatter(
+                  '/social-media-icons/facebook-40x40.jpg',
+                )}
+                height={25}
+                width={25}
+                alt="facebook"
+              />
+            </Nav.Link>
           </Nav.Item>
-          <Nav.Item className="mx-2">
-            <Link href="https://www.instagram.com/wavelandscapingdesign">
-              <a>
-                <Image
-                  src={imageSourceFormatter(
-                    '/social-media-icons/instagram-40x40.jpg',
-                  )}
-                  height={25}
-                  width={25}
-                  alt="instagram"
-                />
-              </a>
-            </Link>
+          <Nav.Item>
+            <Nav.Link
+              className="px-1"
+              href="https://www.instagram.com/wavelandscapingdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={imageSourceFormatter(
+                  '/social-media-icons/instagram-40x40.jpg',
+                )}
+                height={25}
+                width={25}
+                alt="instagram"
+              />
+            </Nav.Link>
           </Nav.Item>
-          <Nav.Item className="mx-1">
-            <Link href="https://www.tiktok.com/@wavelandscapingdesign">
-              <a>
-                <Image
-                  src={imageSourceFormatter(
-                    '/social-media-icons/tiktok-40x40.jpg',
-                  )}
-                  height={25}
-                  width={25}
-                  alt="tiktok"
-                />
-              </a>
-            </Link>
+          <Nav.Item>
+            <Nav.Link
+              className="px-1"
+              href="https://www.tiktok.com/@wavelandscapingdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={imageSourceFormatter(
+                  '/social-media-icons/tiktok-40x40.jpg',
+                )}
+                height={25}
+                width={25}
+                alt="tiktok"
+              />
+            </Nav.Link>
           </Nav.Item>
         </Nav>
         <Navbar collapseOnSelect expand="lg" className="py-0 my-0">

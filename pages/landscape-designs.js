@@ -55,7 +55,9 @@ export async function getStaticProps() {
       gallery:
         landscapeDesignData.map((photo, index) => ({
           id: photo.ts,
-          src: imageSourceFormatter(`/landscape-desgins/${photo.data.fileName}`),
+          src: imageSourceFormatter(
+            `/landscape-desgins/${photo.data.fileName}`,
+          ),
           alt: `design-${index}`,
           width: photo.data.width,
           height: photo.data.height,

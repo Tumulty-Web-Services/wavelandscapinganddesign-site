@@ -3,5 +3,5 @@
 }
 .galleryImage:hover {
   cursor: pointer;
-  box-shadow: 0 .3rem 1rem rgba(0,0,0,.55)!important;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.55) !important;
 }

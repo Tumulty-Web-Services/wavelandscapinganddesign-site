@@ -53,7 +53,13 @@ export default function Careers() {
             </h4>
           </Col>
           <Col sm={12} md={{ span: 6, offset: 3 }} className="my-5">
-            <form name="careers" action="/success" method="POST" data-netlify="true" encType="multipart/form-data">
+            <form
+              name="careers"
+              action="/success"
+              method="POST"
+              data-netlify="true"
+              encType="multipart/form-data"
+            >
               <input type="hidden" name="form-name" value="careers" />
               <Row>
                 <Col sm={12}>
@@ -89,11 +95,7 @@ export default function Careers() {
                   </label>
                   <label className={formStyles.label} htmlFor="resume">
                     <span className="d-block mb-1">Resume</span>
-                    <input
-                      id="resume"
-                      name="resume"
-                      type="file"
-                    />
+                    <input id="resume" name="resume" type="file" />
                   </label>
                 </Col>
                 <Col sm={12}>

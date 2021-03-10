@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 
 exports.handler = async () => {
   try {
+    // set it up to first grab the INSTAGRAM ACCESS TOKEN
+    // then pass it to the URL
     const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${process.env.INSTAGRAM_ACCESS_TOKEN}`;
     const request = await fetch(url).then((data) => data.json());
 

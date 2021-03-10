@@ -10,7 +10,10 @@ import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia() {
   const url = '/.netlify/functions/instagram-feed';
-  const { data, error } = useSWR(url, fetch(url).then((r) => r.json()));
+  const { data, error } = useSWR(
+    url,
+    fetch(url).then((r) => r.json()),
+  );
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
@@ -41,11 +44,19 @@ export default function SocialMedia() {
         <Col sm={12}>
           <div className="my-5">
             <h3>
-              <a href="https://www.instagram.com/wavelandscapingdesign/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/wavelandscapingdesign/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <strong>@wavelandscapingdesign</strong>
               </a>
             </h3>
-            <Carousel className="text-center mt-3 mb-5" infinite responsive={responsive}>
+            <Carousel
+              className="text-center mt-3 mb-5"
+              infinite
+              responsive={responsive}
+            >
               {data.body.map((post) => (
                 <div key={post.id} className="px-3">
                   <div
@@ -56,7 +67,7 @@ export default function SocialMedia() {
                       backgroundSize: 'cover',
                       height: '600px',
                       width: '400px',
-                      borderRadius: '5px'
+                      borderRadius: '5px',
                     }}
                   />
                   <span className="mt-2 d-block">{post.caption}</span>
@@ -69,25 +80,44 @@ export default function SocialMedia() {
               label="Connect Now"
             />
             <div className="d-flex justify-content-center my-5">
-              <a href="https://www.facebook.com/wavelandscapingdesign" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/wavelandscapingdesign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/FB-250x250.jpg')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/FB-250x250.jpg',
+                  )}
                   width={50}
                   height={50}
                   alt="Facebook"
                 />
               </a>
-              <a href="https://www.instagram.com/wavelandscapingdesign" target="_blank" className="mx-4" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/wavelandscapingdesign"
+                target="_blank"
+                className="mx-4"
+                rel="noopener noreferrer"
+              >
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/Instagram-250x250.jpg')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/Instagram-250x250.jpg',
+                  )}
                   width={50}
                   height={50}
                   alt="Facebook"
                 />
               </a>
-              <a href="https://www.tiktok.com/@wavelandscapingdesign" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.tiktok.com/@wavelandscapingdesign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
-                  src={imageSourceFormatter('/social-media-icons/TikTok-245x268.jpg')}
+                  src={imageSourceFormatter(
+                    '/social-media-icons/TikTok-245x268.jpg',
+                  )}
                   width={50}
                   height={50}
                   alt="Facebook"

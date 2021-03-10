@@ -31,9 +31,7 @@ export default function ServiceDescriptionRight({
       </Col>
       <Col sm={12} md={6} className="mb-5">
         <Image
-          src={imageSourceFormatter(
-            `/services/${image}`,
-          )}
+          src={imageSourceFormatter(`/services/${image}`)}
           width={width}
           height={height}
           alt={title}

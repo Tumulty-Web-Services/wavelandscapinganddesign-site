@@ -58,21 +58,21 @@ a {
 }
 
 .react-multiple-carousel__arrow--right {
-  right: -1.2%!important;
+  right: -1.2% !important;
 }
 
 .react-multiple-carousel__arrow--left {
-  left: -1.2%!important;
+  left: -1.2% !important;
 }
 
 .react-multiple-carousel__arrow:before {
-  color: #000!important;
+  color: #000 !important;
 }
 
 .react-multiple-carousel__arrow:before {
-  color: #000!important;
+  color: #000 !important;
 }
 
 .react-multiple-carousel__arrow {
-  background: hsla(0,0%,100%,0)!important;
+  background: hsla(0, 0%, 100%, 0) !important;
 }

@@ -16,9 +16,7 @@ export default function ServiceDescriptionLeft({
     <Row className="my-4" id={link}>
       <Col sm={12} md={6}>
         <Image
-          src={imageSourceFormatter(
-            `/services/${image}`,
-          )}
+          src={imageSourceFormatter(`/services/${image}`)}
           width={width}
           height={height}
           alt={title}

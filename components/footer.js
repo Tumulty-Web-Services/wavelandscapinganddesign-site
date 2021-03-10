@@ -23,18 +23,14 @@ export default function Footer() {
                   <li>
                     <Link href="/services">
                       <a>
-                        <small>
-                          Services
-                        </small>
+                        <small>Services</small>
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/gallery">
                       <a>
-                        <small>
-                          Gallery
-                        </small>
+                        <small>Gallery</small>
                       </a>
                     </Link>
                   </li>
@@ -42,34 +38,26 @@ export default function Footer() {
                     <Link href="/careers">
                       <a>
                         {' '}
-                        <small>
-                          Careers
-                        </small>
+                        <small>Careers</small>
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
                       <a>
-                        <small>
-                          Contact
-                        </small>
+                        <small>Contact</small>
                       </a>
                     </Link>
                   </li>
                   <li>
                     <a href="/sitemap.xml">
-                      <small>
-                        Sitemap
-                      </small>
+                      <small>Sitemap</small>
                     </a>
                   </li>
                   <li>
                     <Link href="/privacy-policy">
                       <a>
-                        <small>
-                          Privacy Policy
-                        </small>
+                        <small>Privacy Policy</small>
                       </a>
                     </Link>
                   </li>
@@ -83,9 +71,7 @@ export default function Footer() {
                   <li>
                     <Link href="https://www.facebook.com/wavelandscapingdesign">
                       <a>
-                        <small>
-                          Facebook
-                        </small>
+                        <small>Facebook</small>
                       </a>
                     </Link>
                   </li>
@@ -93,9 +79,7 @@ export default function Footer() {
                     <Link href="https://www.instagram.com/wavelandscapingdesign">
                       <a>
                         {' '}
-                        <small>
-                          Instagram
-                        </small>
+                        <small>Instagram</small>
                       </a>
                     </Link>
                   </li>
@@ -103,9 +87,7 @@ export default function Footer() {
                     <Link href="https://www.tiktok.com/@wavelandscapingdesign">
                       <a>
                         {' '}
-                        <small>
-                          Tik Tok
-                        </small>
+                        <small>Tik Tok</small>
                       </a>
                     </Link>
                   </li>
