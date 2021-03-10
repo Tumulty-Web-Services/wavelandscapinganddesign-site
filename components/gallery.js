@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import styles from 'styles/Gallery.module.css';
 
 function MyVerticallyCenteredModal({ modalShow, setModalShow, currentPhoto }) {
   return (
@@ -47,6 +48,7 @@ export default function Gallery({ photos }) {
                 <div
                   tabIndex="0"
                   role="button"
+                  className={styles.galleryImage}
                   aria-label={`photo-${index}`}
                   style={{
                     backgroundImage: `url(${`https://res.cloudinary.com/tumulty-web-services/image/upload/${photo.src}`})`,
