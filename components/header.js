@@ -16,7 +16,7 @@ export default function Header() {
         <Nav className={`${styles.socialMediaIcons} justify-content-end`}>
           <Nav.Item>
             <Nav.Link
-              className="px-1"
+              className="px-2"
               href="https://www.facebook.com/wavelandscapingdesign"
               target="_blank"
               rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function Header() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link
-              className="px-1"
+              className="px-2"
               href="https://www.instagram.com/wavelandscapingdesign"
               target="_blank"
               rel="noopener noreferrer"
