@@ -36,11 +36,6 @@ export default function Home({ gallery }) {
           property="og:description"
           content="Wave Landscaping & Design is the premiere landscaping design and maintenance service in West Palm Beach, FL."
         />
-        {/* <script
-          key="ScarinciHollenbeck"
-          type="application/ld+json"ds
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        /> */}
       </Head>
       <Banner />
       <div className={styles.grayBackground}>

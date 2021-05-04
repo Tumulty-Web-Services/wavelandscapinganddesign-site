@@ -43,7 +43,7 @@ export default function SocialMedia() {
       <Row>
         <Col sm={12}>
           <div className="my-5">
-            <h3>
+            {/* <h3>
               <a
                 href="https://www.instagram.com/wavelandscapingdesign/"
                 target="_blank"
@@ -51,8 +51,8 @@ export default function SocialMedia() {
               >
                 <strong>@wavelandscapingdesign</strong>
               </a>
-            </h3>
-            <Carousel
+            </h3> */}
+            {/* <Carousel
               className="text-center mt-3 mb-5"
               infinite
               responsive={responsive}
@@ -73,7 +73,7 @@ export default function SocialMedia() {
                   <span className="mt-2 d-block">{post.caption}</span>
                 </div>
               ))}
-            </Carousel>
+            </Carousel> */}
             <TitleAndButton
               title="Let's make your designs a reality, together"
               link="/contact"
