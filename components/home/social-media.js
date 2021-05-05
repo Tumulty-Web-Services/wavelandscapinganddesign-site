@@ -41,8 +41,8 @@ export default function SocialMedia() {
   return (
     <Container>
       <Row>
-        <Col sm={12}>
-          <div className="my-5">
+        <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
+          <div>
             {/* <h3>
               <a
                 href="https://www.instagram.com/wavelandscapingdesign/"
