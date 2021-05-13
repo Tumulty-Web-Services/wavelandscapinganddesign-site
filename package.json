@@ -7,13 +7,13 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-on-netlify",
     "format": "yarn prettier --write .",
     "lint": "eslint . --fix"
   },
   "author": "tumulty web services, llc",
   "license": "ISC",
   "dependencies": {
+    "@netlify/plugin-nextjs": "^3.2.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.0.0-beta2",
     "dotenv": "^8.2.0",
