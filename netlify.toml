@@ -1,6 +1,6 @@
 [build]
   command   = "yarn build"
-  # functions = "_functions"
+  functions = "_functions"
   publish   = "out_publish"
   
 [[plugins]]
