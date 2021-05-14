@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import useSWR from 'swr';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,6 +9,15 @@ import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia({ feed }) {
+  const fetcher = (url) => fetch(url).then(r => r.json());
+
+  const { data, error } = useSWR('/.netlify/functions/instagram-feed', fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  console.log(data);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -42,13 +52,13 @@ export default function SocialMedia({ feed }) {
                 <strong>@wavelandscapingdesign</strong>
               </a>
             </h3>
-            {feed.length > 0 && (
+            {data.body.length > 0 && (
               <Carousel
                 className="text-center mt-3 mb-5"
                 infinite
                 responsive={responsive}
               >
-                {feed.map((post) => (
+                {data.body.map((post) => (
                   <div key={post.id} className="px-3">
                     <div
                       style={{
