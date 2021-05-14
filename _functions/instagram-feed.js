@@ -25,7 +25,7 @@ exports.handler = async () => {
   const profile = await client.getHome();
 
   const photos = profile.data.user.edge_web_feed_timeline.edges.map(({ node }) => ({
-    media_url: fetchAsBlob(node.display_url).then(convertBlobToBase64).then((res) => res),
+    media_url: node.display_url,
     caption: node.edge_media_to_caption.edges[0].node.text,
     id: node.id,
   }));
