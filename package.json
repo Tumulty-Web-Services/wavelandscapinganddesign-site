@@ -7,7 +7,6 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "postbuild": "next-on-netlify",
     "format": "yarn prettier --write .",
     "lint": "eslint . --fix"
   },
@@ -22,7 +21,6 @@
     "globby": "^11.0.2",
     "instagram-web-api": "^2.2.2",
     "next": "^10.0.6",
-    "next-on-netlify": "^2.9.0",
     "node-fetch": "^2.6.1",
     "prettier": "^2.2.1",
     "react": "^17.0.1",

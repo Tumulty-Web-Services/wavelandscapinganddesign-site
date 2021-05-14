@@ -2,8 +2,8 @@ require('dotenv').config();
 const Instagram = require('instagram-web-api');
 const fetch = require('node-fetch');
 
-const fetchAsBlob = url => fetch(url)
-    .then(response => response.blob());
+const fetchAsBlob = (url) => fetch(url)
+  .then((response) => response.blob());
 
 const convertBlobToBase64 = (blob) => new Promise((resolve, reject) => {
   const reader = new FileReader();
