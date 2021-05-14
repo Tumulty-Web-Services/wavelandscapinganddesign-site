@@ -8,7 +8,7 @@ import TitleAndButton from 'components/home/title-and-button';
 import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function SocialMedia({ feed }) {
+export default function SocialMedia() {
   const fetcher = (url) => fetch(url).then(r => r.json());
 
   const { data, error } = useSWR('/.netlify/functions/instagram-feed', fetcher)
