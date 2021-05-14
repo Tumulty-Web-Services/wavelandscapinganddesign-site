@@ -9,14 +9,9 @@ import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia() {
-  const fetcher = (url) => fetch(url).then(r => r.json());
+  const fetcher = (url) => fetch(url).then((r) => r.json());
 
-  const { data, error } = useSWR('/.netlify/functions/instagram-feed', fetcher)
-
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-
-  console.log(data);
+  const { data } = useSWR('/.netlify/functions/instagram-feed', fetcher);
 
   const responsive = {
     superLargeDesktop: {
@@ -42,17 +37,18 @@ export default function SocialMedia() {
     <Container>
       <Row>
         <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
-          <div>
-            <h3>
-              <a
-                href="https://www.instagram.com/wavelandscapingdesign/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>@wavelandscapingdesign</strong>
-              </a>
-            </h3>
-            {data.body.length > 0 && (
+          <div>            
+            {data && (
+              <>
+                <h3>
+                  <a
+                    href="https://www.instagram.com/wavelandscapingdesign/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>@wavelandscapingdesign</strong>
+                  </a>
+              </h3>
               <Carousel
                 className="text-center mt-3 mb-5"
                 infinite
@@ -75,6 +71,7 @@ export default function SocialMedia() {
                   </div>
                 ))}
               </Carousel>
+              </>
             )}
             <TitleAndButton
               title="Let's make your designs a reality, together"

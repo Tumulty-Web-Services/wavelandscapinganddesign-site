@@ -1,5 +1,18 @@
 require('dotenv').config();
 const Instagram = require('instagram-web-api');
+const fetch = require('node-fetch');
+
+const fetchAsBlob = url => fetch(url)
+    .then(response => response.blob());
+
+const convertBlobToBase64 = (blob) => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onerror = reject;
+  reader.onload = () => {
+    resolve(reader.result);
+  };
+  reader.readAsDataURL(blob);
+});
 
 exports.handler = async () => {
   const client = new Instagram({
@@ -7,13 +20,12 @@ exports.handler = async () => {
     password: process.env.INSTA_PASSWORD,
   });
 
-  // const photos = await client.getPhotosByUsername({ username: 'wavelandscapingdesign' })
-
   await client.login();
 
   const profile = await client.getHome();
+
   const photos = profile.data.user.edge_web_feed_timeline.edges.map(({ node }) => ({
-    media_url: node.display_url,
+    media_url: fetchAsBlob(node.display_url).then(convertBlobToBase64).then((res) => res),
     caption: node.edge_media_to_caption.edges[0].node.text,
     id: node.id,
   }));
