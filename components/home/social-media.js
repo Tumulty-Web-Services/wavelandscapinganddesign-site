@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import BeatLoader from 'react-spinners/BeatLoader';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,7 +15,7 @@ export default function SocialMedia() {
     async function getInstagramPosts() {
       const request = await fetch('/.netlify/functions/instagram-feed')
         .then((data) => data)
-        .catch((err) => err);
+        .catch((err) => console.error(err));
 
       if (request.status === 200) {
         setPosts(request.data);
@@ -52,12 +51,6 @@ export default function SocialMedia() {
       <Row>
         <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
           <div>
-            {(posts.length <= 0) && (
-              <div className="mx-auto d-block text-center mb-5">
-                <BeatLoader color="#7C9DDE" />
-              </div>
-            )}
-
             {(posts.length > 0) && (
               <>
                 <h3>
