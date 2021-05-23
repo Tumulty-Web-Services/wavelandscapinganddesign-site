@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import useSWR from 'swr';
 import BeatLoader from 'react-spinners/BeatLoader';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -8,7 +9,10 @@ import TitleAndButton from 'components/home/title-and-button';
 import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
-export default function SocialMedia({ feed }) {
+export default function SocialMedia() {
+  const fetcher = (url) => fetch(url).then((r) => r.json());
+  const { data: res, error } = useSWR('/.netlify/functions/instagram-feed', fetcher, { refreshInterval: 900000 });
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -34,12 +38,13 @@ export default function SocialMedia({ feed }) {
       <Row>
         <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
           <div>
-            {(!feed) && (
+            {(!res) && (
               <div className="mx-auto d-block text-center mb-5">
                 <BeatLoader color="#7C9DDE" />
               </div>
             )}
-            {(feed) && (
+            {(error) && <></>}
+            {(res) && (
               <>
                 <h3>
                   <a
@@ -56,7 +61,7 @@ export default function SocialMedia({ feed }) {
                   infinite
                   responsive={responsive}
                 >
-                  {feed.data.map((node) => (
+                  {res.data.map((node) => (
                     <div key={node.id} className="px-3">
                       <div
                         style={{

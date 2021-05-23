@@ -8,7 +8,7 @@ import styles from 'styles/Home.module.css';
 import { getGalleryPhotos } from 'utils/fauna';
 import imageSourceFormatter from 'utils/image-source-format';
 
-export default function Home({ gallery, feed }) {
+export default function Home({ gallery }) {
   return (
     <>
       <Head>
@@ -51,14 +51,13 @@ export default function Home({ gallery, feed }) {
         />
         <br />
       </div>
-      <SocialMedia feed={feed} />
+      <SocialMedia />
     </>
   );
 }
 
 export async function getStaticProps() {
   const galleryData = await getGalleryPhotos();
-  const feed = await fetch(`${process.env.BASE_URL}/.netlify/functions/instagram-feed`).then((res) => res.json());
 
   /** Serialize gallery data  */
   const gallery = galleryData.filter((_, i) => i <= 8).map((photo) => ({
@@ -72,8 +71,6 @@ export async function getStaticProps() {
   return {
     props: {
       gallery: gallery || [],
-      feed,
     },
-    revalidate: 900,
   };
 }
