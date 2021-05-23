@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,6 +11,32 @@ import styles from 'styles/Navbar.module.css';
 import imageSourceFormatter from 'utils/image-source-format';
 
 export default function Header() {
+  <Head>
+    <link
+      rel="preload"
+      href="/fonts/EBGaramond-Regular.ttf"
+      as="font"
+      crossOrigin=" "
+    />
+    <link
+      rel="preload"
+      href="/fonts/EBGaramond-Bold.ttf"
+      as="font"
+      crossOrigin=""
+    />
+    <link
+      rel="preload"
+      href="/fonts/EBGaramond-Italic.ttf"
+      as="font"
+      crossOrigin=""
+    />
+    <link
+      rel="preload"
+      href="/fonts/proxima-nova-bold.ttf"
+      as="font"
+      crossOrigin=""
+    />
+  </Head>;
   return (
     <header className="my-4">
       <Container>

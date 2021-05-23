@@ -32,30 +32,6 @@ function App({ Component, pageProps }) {
         <link rel="manifest" href="/images/favicon/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#2e3a52" />
         <meta name="theme-color" content="#2e3a52" />
-        <link
-          rel="preload"
-          href="/fonts/EBGaramond-Regular.ttf"
-          as="font"
-          crossOrigin=" "
-        />
-        <link
-          rel="preload"
-          href="/fonts/EBGaramond-Bold.ttf"
-          as="font"
-          crossOrigin=" "
-        />
-        <link
-          rel="preload"
-          href="/fonts/EBGaramond-Italic.ttf"
-          as="font"
-          crossOrigin=" "
-        />
-        <link
-          rel="preload"
-          href="/fonts/proxima-nova-bold.ttf"
-          as="font"
-          crossOrigin=" "
-        />
       </Head>
       <Header />
       <main>

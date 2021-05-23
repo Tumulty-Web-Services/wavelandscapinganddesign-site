@@ -23,5 +23,6 @@ module.exports = {
     'max-len': 'off',
     'func-names': 'off',
     'import/prefer-default-export': 'off',
+    'no-console': 'off'
   },
 };

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import BeatLoader from 'react-spinners/BeatLoader';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -28,53 +29,55 @@ export default function SocialMedia({ feed }) {
     },
   };
 
-  const gallery = feed.map(({ node }) => ({
-    media_url: node.display_url,
-    caption: node.edge_media_to_caption.edges[0].node.text,
-    id: node.id,
-  }));
-
   return (
     <Container>
       <Row>
         <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
           <div>
-            {/* <h3>
-              <a
-                href="https://www.instagram.com/wavelandscapingdesign/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>@wavelandscapingdesign</strong>
-              </a>
-            </h3>
+            {(!feed) && (
+              <div className="mx-auto d-block text-center mb-5">
+                <BeatLoader color="#7C9DDE" />
+              </div>
+            )}
+            {(feed) && (
+              <>
+                <h3>
+                  <a
+                    href="https://www.instagram.com/wavelandscapingdesign/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <strong>@wavelandscapingdesign</strong>
+                  </a>
+                </h3>
 
-            <Carousel
-              className="text-center mt-3 mb-5"
-              infinite
-              responsive={responsive}
-            >
-              {feed.map(({ node }) => (
-                <div key={node.shortcode} className="px-3">
-                  <div
-                    style={{
-                      backgroundImage: `url(${node.thumbnail_src})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center center',
-                      backgroundSize: 'cover',
-                      height: '600px',
-                      width: '400px',
-                      borderRadius: '5px',
-                    }}
-                  />
-                  <span className="mt-2 d-block">
-                    {node.edge_media_to_caption.edges[0].node.text
-                      .replace(/(#\w+)+/g, '')
-                      .trim()}
-                  </span>
-                </div>
-              ))}
-            </Carousel> */}
+                <Carousel
+                  className="text-center mt-3 mb-5"
+                  infinite
+                  responsive={responsive}
+                >
+                  {feed.data.map((node) => (
+                    <div key={node.id} className="px-3">
+                      <div
+                        style={{
+                          backgroundImage: `url(/images/instagram/${node.url})`,
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'center center',
+                          backgroundSize: 'cover',
+                          height: '600px',
+                          width: '400px',
+                          borderRadius: '5px',
+                        }}
+                      />
+                      <span className="mt-2 d-block">
+                        {node.caption}
+                      </span>
+                    </div>
+                  ))}
+                </Carousel>
+
+              </>
+            )}
 
             <TitleAndButton
               title="Let's make your designs a reality, together"

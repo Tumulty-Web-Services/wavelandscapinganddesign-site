@@ -6,3 +6,5 @@ out_functions
 out_publish
 # Local Netlify folder
 .netlify
+
+public/images/instagram/*

@@ -1,19 +1,22 @@
 require('dotenv').config();
+const fs = require('fs');
+const rimraf = require('rimraf');
 const Instagram = require('instagram-web-api');
-const fetch = require('node-fetch');
+const axios = require('axios');
 
-const fetchAsBlob = (url) => fetch(url)
-  .then((response) => response.blob());
-
-const convertBlobToBase64 = (blob) => new Promise((resolve, reject) => {
-  const reader = new FileReader();
-  reader.onerror = reject;
-  reader.onload = () => {
-    resolve(reader.result);
-  };
-  reader.readAsDataURL(blob);
-});
-
+const writeImagesToDir = (url, imagePath) => {
+  axios({
+    url,
+    responseType: 'stream',
+  }).then(
+    (response) => new Promise((resolve, reject) => {
+      response.data
+        .pipe(fs.createWriteStream(imagePath))
+        .on('finish', () => resolve())
+        .on('error', (e) => reject(e));
+    }),
+  );
+};
 exports.handler = async () => {
   const client = new Instagram({
     username: process.env.INSTA_USERNAME,
@@ -22,12 +25,25 @@ exports.handler = async () => {
 
   await client.login();
 
-  const profile = await client.getHome();
+  const instagram = await client.getPhotosByUsername({
+    username: process.env.INSTA_USERNAME,
+  });
 
-  const photos = profile.data.user.edge_web_feed_timeline.edges.map(({ node }) => ({
-    media_url: node.display_url,
-    caption: node.edge_media_to_caption.edges[0].node.text,
-    id: node.id,
+  rimraf('./public/images/instagram/*', () => {
+    console.log('finished deleting!');
+    instagram.user.edge_owner_to_timeline_media.edges.forEach(async (i) => {
+      await writeImagesToDir(i.node.display_url, `./public/images/instagram/${i.node.id}.jpg`);
+    });
+  });
+
+  const feed = instagram.user.edge_owner_to_timeline_media.edges.map((i) => ({
+    id: i.node.id,
+    dimensions: {
+      width: i.node.dimensions.width,
+      height: i.node.dimensions.height,
+    },
+    url: `${i.node.id}.jpg`,
+    caption: i.node.edge_media_to_caption.edges[0].node.text,
   }));
 
   try {
@@ -35,8 +51,8 @@ exports.handler = async () => {
       statusCode: 200,
       body: JSON.stringify({
         status: 200,
-        body: photos,
         msg: 'Here are the latest Instagram posts',
+        data: feed || [],
       }),
     };
   } catch (error) {
