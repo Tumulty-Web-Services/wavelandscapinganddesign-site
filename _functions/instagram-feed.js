@@ -1,6 +1,7 @@
+/* eslint-disable no-return-await */
 require('dotenv').config();
 const fs = require('fs');
-const rimraf = require('rimraf');
+const rmfr = require('rmfr');
 const Instagram = require('instagram-web-api');
 const axios = require('axios');
 
@@ -29,11 +30,10 @@ exports.handler = async () => {
     username: process.env.INSTA_USERNAME,
   });
 
-  rimraf('./public/images/instagram/*', () => {
-    console.log('finished deleting!');
-    instagram.user.edge_owner_to_timeline_media.edges.forEach(async (i) => {
-      await writeImagesToDir(i.node.display_url, `./public/images/instagram/${i.node.id}.jpg`);
-    });
+  (async () => await rmfr('./public/images/instagram/*'))();
+
+  instagram.user.edge_owner_to_timeline_media.edges.forEach(async (i) => {
+    await writeImagesToDir(i.node.display_url, `./public/images/instagram/${i.node.id}.jpg`);
   });
 
   const feed = instagram.user.edge_owner_to_timeline_media.edges.map((i) => ({

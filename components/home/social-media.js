@@ -11,7 +11,14 @@ import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data: res, error } = useSWR('/.netlify/functions/instagram-feed', fetcher, { refreshInterval: 900000 });
+  const { data: res, error } = useSWR('/.netlify/functions/instagram-feed', fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnMount: false,
+    revalidateOnReconnect: false,
+    refreshWhenOffline: false,
+    refreshWhenHidden: false,
+    refreshInterval: 0,
+  });
 
   const responsive = {
     superLargeDesktop: {
