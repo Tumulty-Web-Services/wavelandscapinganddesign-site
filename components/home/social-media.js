@@ -1,5 +1,5 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import useSWR from 'swr';
 import BeatLoader from 'react-spinners/BeatLoader';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -10,15 +10,22 @@ import imageSourceFormatter from 'utils/image-source-format';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function SocialMedia() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data: res, error } = useSWR('/.netlify/functions/instagram-feed', fetcher, {
-    revalidateOnFocus: false,
-    revalidateOnMount: false,
-    revalidateOnReconnect: false,
-    refreshWhenOffline: false,
-    refreshWhenHidden: false,
-    refreshInterval: 0,
-  });
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    async function getInstagramPosts() {
+      const request = await fetch('/.netlify/functions/instagram-feed')
+        .then((data) => data)
+        .catch((err) => err);
+
+      if (request.status === 200) {
+        setPosts(request.data);
+      }
+    }
+    if (posts.length <= 0) {
+      getInstagramPosts();
+    }
+  }, []);
 
   const responsive = {
     superLargeDesktop: {
@@ -45,13 +52,13 @@ export default function SocialMedia() {
       <Row>
         <Col sm={12} style={{ marginTop: '6.5em', marginBottom: '5em' }}>
           <div>
-            {(!res) && (
+            {(posts.length <= 0) && (
               <div className="mx-auto d-block text-center mb-5">
                 <BeatLoader color="#7C9DDE" />
               </div>
             )}
-            {(error) && <></>}
-            {(res) && (
+
+            {(posts.length > 0) && (
               <>
                 <h3>
                   <a
@@ -68,7 +75,7 @@ export default function SocialMedia() {
                   infinite
                   responsive={responsive}
                 >
-                  {res.data.map((node) => (
+                  {posts.map((node) => (
                     <div key={node.id} className="px-3">
                       <div
                         style={{
