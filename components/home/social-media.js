@@ -14,7 +14,7 @@ export default function SocialMedia() {
   useEffect(() => {
     async function getInstagramPosts() {
       const request = await fetch('/.netlify/functions/instagram-feed')
-        .then((data) => data)
+        .then((data) => data.json())
         .catch((err) => console.error(err));
 
       if (request.status === 200) {
@@ -45,6 +45,8 @@ export default function SocialMedia() {
       items: 1,
     },
   };
+
+  console.log(posts);
 
   return (
     <Container>
