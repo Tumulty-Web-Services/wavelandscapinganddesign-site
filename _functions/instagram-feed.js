@@ -42,7 +42,7 @@ exports.handler = async () => {
       width: i.node.dimensions.width,
       height: i.node.dimensions.height,
     },
-    url: `${i.node.id}.jpg`,
+    url: `/images/instagram/${i.node.id}.jpg`,
     caption: i.node.edge_media_to_caption.edges[0].node.text,
   }));
 

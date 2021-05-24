@@ -11,20 +11,20 @@ import 'react-multi-carousel/lib/styles.css';
 export default function SocialMedia() {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    async function getInstagramPosts() {
-      const request = await fetch('/.netlify/functions/instagram-feed')
-        .then((data) => data.json())
-        .catch((err) => console.error(err));
+  // useEffect(() => {
+  //   async function getInstagramPosts() {
+  //     const request = await fetch('/.netlify/functions/instagram-feed')
+  //       .then((data) => data.json())
+  //       .catch((err) => console.error(err));
 
-      if (request.status === 200) {
-        setPosts(request.data);
-      }
-    }
-    if (posts.length <= 0) {
-      getInstagramPosts();
-    }
-  }, []);
+  //     if (request.status === 200) {
+  //       setPosts(request.data);
+  //     }
+  //   }
+  //   if (posts.length <= 0) {
+  //     getInstagramPosts();
+  //   }
+  // }, []);
 
   const responsive = {
     superLargeDesktop: {
@@ -74,7 +74,7 @@ export default function SocialMedia() {
                     <div key={node.id} className="px-3">
                       <div
                         style={{
-                          backgroundImage: `url(/images/instagram/${node.url})`,
+                          backgroundImage: node.url,
                           backgroundRepeat: 'no-repeat',
                           backgroundPosition: 'center center',
                           backgroundSize: 'cover',
