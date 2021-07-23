@@ -32,6 +32,16 @@
   text-align: center;
 }
 
+@media (min-width: 1023px) {
+  .blueTitle {
+    font-size: 7rem;
+  }
+  .whiteTitle {
+    font-size: 5rem;
+    margin-bottom: -15px;
+  }
+}
+
 @media (min-width: 1400px) {
   .blueTitle {
     font-size: 9rem;
