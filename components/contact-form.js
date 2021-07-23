@@ -33,7 +33,7 @@ export default function ContactForm({ contactPage }) {
             <li>
               <h5>
                 <strong>Email: </strong>
-                wavelandscapinganddesign@gmail.com
+                wavelandscapingdesign@gmail.com
               </h5>
             </li>
           </ul>
